@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  width: 90vw;
+  /* border: 1px solid white; */
+}
+.resumeWrapper {
+  margin-right: auto;
+}
+.linksWrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navItem {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 780px) {
+  .linksWrapper {
+    width: 70%;
+  }
+}
