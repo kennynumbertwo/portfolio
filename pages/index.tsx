@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/Footer';
+import Introduction from '../components/Introduction';
+import LinkFooter from '../components/LinkFooter';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
 
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
           itemThree: 'Contact',
         }}
       />
+      <Introduction />
+      <LinkFooter />
       <Footer />
     </div>
   );

@@ -1,0 +1,40 @@
+.iconGithub svg:hover {
+  stroke: var(--font-header-green);
+}
+.iconDiscord svg:hover {
+  fill: var(--font-header-green);
+}
+.iconLinkedIn svg:hover {
+  stroke: var(--font-header-green);
+}
+.iconMail svg:hover {
+  stroke: var(--font-header-green);
+}
+.iconsWrapperOuter {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  right: auto;
+}
+.iconsWrapperInner {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.iconsWrapperInner svg {
+  margin: 15px 0px;
+  transition: all 300ms;
+}
+.iconsWrapperInner svg:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.verticalLine {
+  width: 1px;
+  height: 80px;
+  margin: 20px 0 0;
+  background-color: white;
+}

@@ -1,0 +1,31 @@
+.container {
+  width: 65%;
+  /* border: 1px solid white; */
+}
+.hello {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 15px 0 30px;
+}
+.name {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin: 0 0 35px;
+}
+.developer {
+  font-size: 2rem;
+  color: var(--font-header-green);
+  margin: 0 0 50px;
+}
+.description {
+  color: var(--font-body);
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+.descriptionWrapper {
+  width: 700px;
+  margin: 40px 0 0;
+}

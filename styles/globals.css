@@ -72,4 +72,11 @@ a {
   /* FONTS */
   --font-family-headers: 'SF Mono', SFMono-Regular, ui-monospace,
     'DejaVu Sans Mono', Menlo, Consolas, monospace;
+  --font-family-body: 'SF Pro', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  /* Screen Sizes */
+  --max-xs: 576px;
+  --max-sm: 700px;
+  --max-md: 950px;
+  --max-lg: 1200px;
 }
