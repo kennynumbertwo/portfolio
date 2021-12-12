@@ -1,4 +1,4 @@
-.wrapper {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,37 +12,25 @@
   width: 100vw;
   height: 70px;
 }
-.iconGithub {
-  height: 24px;
-  width: 24px;
-  margin: 10px 20px;
-  display: block;
-  background: url('../public/github.svg');
-  background-repeat: no-repeat;
+.iconsWrapper svg {
+  margin: 0px 15px;
+  transition: all 250ms ease-in-out;
 }
-.iconDiscord {
-  height: 27px;
-  width: 27px;
-  margin: 10px 20px;
-  display: block;
-  background: url('../public/discord.svg');
-  background-repeat: no-repeat;
+.iconGithub svg:hover {
+  stroke: var(--font-header-green);
 }
-.iconLinkedIn {
-  height: 24px;
-  width: 24px;
-  margin: 10px 20px;
-  display: block;
-  background: url('../public/linkedin.svg');
-  background-repeat: no-repeat;
+.iconDiscord svg:hover {
+  fill: var(--font-header-green);
 }
-.iconMail {
-  height: 24px;
-  width: 24px;
-  margin: 10px 20px;
-  display: block;
-  background: url('../public/mail.svg');
-  background-repeat: no-repeat;
+.iconLinkedIn svg:hover {
+  stroke: var(--font-header-green);
+}
+.iconMail svg:hover {
+  stroke: var(--font-header-green);
+}
+.iconsWrapper svg:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
 }
 .text {
   font-size: 0.85rem;
