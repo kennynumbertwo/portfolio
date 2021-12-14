@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
@@ -7,6 +8,22 @@ import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  // Listen for the window size
+  useEffect(() => {
+    if (window.innerWidth <= 576) {
+      setIsMobile(true);
+    }
+    function handleMobileResize() {
+      if (window.innerWidth <= 576) {
+        setIsMobile(true);
+      }
+      if (window.innerWidth > 576) {
+        setIsMobile(false);
+      }
+    }
+    window.addEventListener('resize', handleMobileResize);
+  }, [isMobile]);
   return (
     <div className={styles.main}>
       <Head>
@@ -20,6 +37,7 @@ const Home: NextPage = () => {
           itemTwo: 'Projects',
           itemThree: 'Contact',
         }}
+        isMobile={isMobile}
       />
       <Introduction />
       <LinkFooter />

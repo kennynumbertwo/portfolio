@@ -29,3 +29,8 @@
   width: 700px;
   margin: 40px 0 0;
 }
+@media only screen and (max-width: 850px) {
+  .description {
+    width: 500px;
+  }
+}
