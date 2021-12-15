@@ -60,8 +60,9 @@ a {
   --background-circle-right: rgb(4, 21, 48);
   --background-circle-left: rgba(55, 88, 102, 0.53);
   --background-projects-body: rgba(80, 237, 180, 0.37);
+  --background-projects-selected: rgba(80, 237, 180, 0.1);
   --background-projects-text: rgb(18, 57, 58);
-  --background-project-navbg: rgb(11, 34, 35);
+  --background-projects-navbg: rgb(11, 34, 35);
 
   /* FONT COLORS */
   --font-header-main: rgb(255, 255, 255);

@@ -8,6 +8,7 @@ import AboutMe from '../components/AboutMe';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
 import Contact from '../components/Contact';
+import Projects from '../components/Projects';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
       />
       <Introduction />
       <AboutMe />
+      <Projects />
       <Contact />
       <LinkFooter />
       <Footer />
