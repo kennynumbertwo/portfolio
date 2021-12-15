@@ -1,0 +1,25 @@
+.wrapper {
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 250ms;
+}
+
+.wrapper svg {
+  stroke: var(--font-header-green);
+  margin: 0 10px 0 0;
+  transition: 250ms;
+}
+
+.wrapper:hover {
+  cursor: default;
+  color: var(--font-header-green);
+}
+.wrapper:hover svg {
+  cursor: default;
+  transform: translateX(2px);
+}
+.text {
+  font-weight: 100;
+}

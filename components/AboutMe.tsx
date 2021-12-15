@@ -1,8 +1,9 @@
 import styles from '../styles/AboutMe.module.css';
 import Image from 'next/image';
 import headshot from '../public/headshot_sized.jpg';
+import SkillsList from '../components/SkillsList';
 
-function AboutMe() {
+function AboutMe(): JSX.Element {
   return (
     <section className={styles.container}>
       <div className={styles.leftSection}>
@@ -24,6 +25,9 @@ function AboutMe() {
             been an incredible journey and I’ve since created applications with
             the following technologies.
           </p>
+        </div>
+        <div className={styles.skillsListWrapper}>
+          <SkillsList />
         </div>
       </div>
       <div className={styles.rightSection}>

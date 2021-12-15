@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.skillsWrapper {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 1px solid white; */
+}
+
+@media (max-width: 1550px) {
+  .skillsWrapper {
+    height: 220px;
+  }
+}
+@media (max-width: 576px) {
+}
