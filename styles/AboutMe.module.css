@@ -7,6 +7,7 @@
 .header {
   font-size: 2rem;
   margin: 0 0 30px;
+  width: 65%;
 }
 .textWrapper {
   display: flex;
@@ -29,15 +30,26 @@
   align-items: flex-start;
   flex-direction: column;
   width: 70%;
-  min-width: 550px;
-  /* border: 1px solid white; */
+  min-width: 500px;
   margin-right: auto;
 }
 .rightSection {
-  padding: 65px 0 0;
+  padding: 0px 0 0;
   width: 400px;
   height: 500px;
 }
 .skillsListWrapper {
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .rightSection {
+    padding: 0;
+  }
+  .leftSection {
+    width: 450px;
+    min-width: 450px;
+  }
 }

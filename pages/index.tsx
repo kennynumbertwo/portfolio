@@ -7,6 +7,7 @@ import LinkFooter from '../components/LinkFooter';
 import AboutMe from '../components/AboutMe';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
+import Contact from '../components/Contact';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
       />
       <Introduction />
       <AboutMe />
+      <Contact />
       <LinkFooter />
       <Footer />
     </div>

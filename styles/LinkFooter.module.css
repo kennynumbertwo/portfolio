@@ -1,3 +1,15 @@
+.iconGithub {
+  animation: 750ms ease-in-out iconsIn;
+}
+.iconDiscord {
+  animation: 700ms ease-in-out iconsIn;
+}
+.iconLinkedIn {
+  animation: 650ms ease-in-out iconsIn;
+}
+.iconMail {
+  animation: 600ms ease-in-out iconsIn;
+}
 .iconGithub svg:hover {
   stroke: var(--font-header-green);
 }
@@ -16,6 +28,7 @@
   bottom: 0;
   left: 5%;
   right: auto;
+  animation: 500ms ease-in-out iconsIn;
 }
 .iconsWrapperInner {
   width: 100%;
@@ -37,4 +50,25 @@
   height: 80px;
   margin: 20px 0 0;
   background-color: white;
+}
+@keyframes iconsIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes iconIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
