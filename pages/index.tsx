@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
 import LinkFooter from '../components/LinkFooter';
+import AboutMe from '../components/AboutMe';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
 
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
         isMobile={isMobile}
       />
       <Introduction />
+      <AboutMe />
       <LinkFooter />
       <Footer />
     </div>

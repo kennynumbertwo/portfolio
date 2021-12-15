@@ -1,0 +1,40 @@
+.container {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.header {
+  font-size: 2rem;
+  margin: 0 0 30px;
+}
+.textWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.text {
+  color: var(--font-body);
+  font-family: var(--font-family-body);
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 120%;
+  white-space: pre-line;
+  padding: 0 50px 0 0;
+}
+.leftSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  min-width: 550px;
+  /* border: 1px solid white; */
+  margin-right: auto;
+}
+.rightSection {
+  padding: 65px 0 0;
+  width: 400px;
+  height: 500px;
+}

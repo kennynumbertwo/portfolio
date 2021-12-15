@@ -26,7 +26,7 @@ function Navbar({ navItemLeft, navItemsRight, isMobile }: NavbarProps) {
     if (isActive) {
       setTimeout(() => {
         setIsShowing(false);
-      }, 200);
+      }, 240);
     }
   };
 
