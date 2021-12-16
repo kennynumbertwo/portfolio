@@ -31,19 +31,14 @@
   justify-content: flex-start;
   align-items: center;
 }
-.headerBG {
-  width: 96%;
-  height: 100px;
-  background-color: var(--background-projects-text);
-  margin: 18px 0 0;
-}
 .projectWrapper {
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 15px 0;
+  margin: 15px 0 15px 0px;
+  transition: 400ms;
   /* "to left" / "to right" - affects initial color */
   background: linear-gradient(
       to left,
@@ -62,8 +57,13 @@
   }
 }
 .projectWrapper.selected {
+  color: var(--font-header-green);
   background-position: left;
-  animation: projectSelect 250ms ease-in-out;
+  animation: projectSelect 200ms ease-in-out;
+}
+.projectWrapper:hover {
+  cursor: pointer;
+  color: var(--font-header-green);
 }
 .projectTitle {
   font-weight: 300;

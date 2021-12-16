@@ -54,6 +54,15 @@ a {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
+    Menlo, Consolas, monospace;
+  color: white;
+}
+
 :root {
   /* BACKGROUND COLORS */
   --background-primary: rgb(2, 12, 27);
