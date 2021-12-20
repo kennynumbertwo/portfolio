@@ -1,15 +1,59 @@
 .container {
   width: 100%;
   height: 100%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .headerBG {
   width: 96%;
   height: 80px;
   background-color: var(--background-projects-text);
   margin: 18px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerBG h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.headerWrapper {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto 0 20px;
+}
+.descriptionContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 55%;
+  margin: auto auto 20px 40px;
+  font-family: var(--font-family-body);
+  line-height: 1.4rem;
+  font-size: 1.1rem;
+}
+.skillsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  margin: auto auto 20px 40px;
+  flex-wrap: wrap;
+}
+.imageContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 25px;
+  right: 25px;
+}
+.image {
+  margin: 5px;
+  display: flex;
 }

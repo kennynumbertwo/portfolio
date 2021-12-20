@@ -1,0 +1,10 @@
+.container {
+  background-color: var(--background-projects-text);
+  padding: 6px;
+  margin: 4px;
+  transition: all 300ms;
+}
+.container:hover {
+  color: var(--font-header-green);
+  background-color: var(--background-projects-text-hover);
+}
