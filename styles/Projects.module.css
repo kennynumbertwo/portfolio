@@ -60,6 +60,7 @@
   color: var(--font-header-green);
   background-position: left;
   animation: projectSelect 200ms ease-in-out;
+  box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.1);
 }
 .projectWrapper:hover {
   cursor: pointer;

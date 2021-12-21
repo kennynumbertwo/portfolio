@@ -9,14 +9,6 @@ import pm_2 from '../public/projects/pm_2.png';
 import destroybox_1 from '../public/projects/destroybox_1.png';
 import destroybox_2 from '../public/projects/destroybox_2.png';
 
-// interface ProjectListItem {
-//   flashcard: {
-//     headerText: string;
-//     description: string;
-//     skills: string[];
-//     images: string[];
-//   };
-// }
 const projects = {
   flashcard: {
     headerText: 'A Flashcard Application built with React',
@@ -35,7 +27,7 @@ const projects = {
     images: [flashcard_1, flashcard_2],
   },
   peermusic: {
-    headerText: 'peermusic Neighbouring Rights',
+    headerText: 'Peermusic Neighbouring Rights',
     description: 'I built this site with for peermusics Neighbouring Rights',
     skills: ['Bootstrap', 'HTML', 'CSS', 'JavaScript', 'AOS Library'],
     images: [pm_1, pm_2],
@@ -43,7 +35,7 @@ const projects = {
   destroybox: {
     headerText: 'Destroy Box Audio',
     description: 'Website for Destroy Box Audio',
-    skills: ['JavaScript', 'HTML', 'CSS', 'JavaScript', 'React'],
+    skills: ['JavaScript', 'HTML', 'CSS', 'React'],
     images: [destroybox_1, destroybox_2],
   },
 };
@@ -88,6 +80,7 @@ function Projects(): JSX.Element {
         </div>
         <div className={styles.containerInfo}>
           <ProjectDetails
+            selected={selected}
             headerText={projects[selected].headerText}
             description={projects[selected].description}
             skills={projects[selected].skills}

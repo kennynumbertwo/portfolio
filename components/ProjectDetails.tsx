@@ -3,6 +3,7 @@ import ProjectSkill from './ProjectSkill';
 import Image from 'next/image';
 
 interface ProjectDetailsProps {
+  selected: string;
   headerText: string;
   description: string;
   skills: string[];
@@ -10,6 +11,7 @@ interface ProjectDetailsProps {
 }
 
 function ProjectDetails({
+  selected,
   headerText,
   description,
   skills,
@@ -26,9 +28,15 @@ function ProjectDetails({
         <p>{description}</p>
       </div>
       <div className={styles.skillsContainer}>
-        {skills.map((skill) => (
-          <ProjectSkill key={skill} text={skill} />
-        ))}
+        {skills.map((skill, index) => {
+          return (
+            <ProjectSkill
+              key={`${selected}-${skill}`}
+              text={skill}
+              delay={index}
+            />
+          );
+        })}
       </div>
       <div className={styles.imageContainer}>
         <div className={styles.image}>
