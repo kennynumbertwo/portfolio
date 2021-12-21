@@ -1,26 +1,43 @@
-import classes from '../styles/LinkFooter.module.css';
+import Link from 'next/link';
 import styles from '../styles/LinkFooter.module.css';
 import DiscordIcon from './icons/Discord';
 import GithubIcon from './icons/Github';
 import LinkedInIcon from './icons/LinkedIn';
 import MailIcon from './icons/Mail';
+import copy from 'copy-to-clipboard';
 
 function LinkFooter() {
+  const handleCopyClick = (link: string) => {
+    copy(link);
+  };
+
   return (
     <div className={styles.iconsWrapperOuter}>
       <div className={styles.iconsWrapperInner}>
-        <span className={styles.iconGithub}>
-          <GithubIcon />
-        </span>
-        <span className={styles.iconDiscord}>
-          <DiscordIcon />
-        </span>
-        <span className={styles.iconLinkedIn}>
-          <LinkedInIcon />
-        </span>
-        <span className={styles.iconMail}>
-          <MailIcon />
-        </span>
+        <Link href={'https://github.com/kennynumbertwo'}>
+          <a target="_blank">
+            <span className={styles.iconGithub}>
+              <GithubIcon />
+            </span>
+          </a>
+        </Link>
+        <button onClick={() => handleCopyClick('kennynumbertwo#8561')}>
+          <span className={styles.iconDiscord}>
+            <DiscordIcon />
+          </span>
+        </button>
+        <Link href={'https://www.linkedin.com/in/kenny-tye-3559106b/'}>
+          <a target="_blank">
+            <span className={styles.iconLinkedIn}>
+              <LinkedInIcon />
+            </span>
+          </a>
+        </Link>
+        <button onClick={() => handleCopyClick('kennytye.dev@gmail.com')}>
+          <span className={styles.iconMail}>
+            <MailIcon />
+          </span>
+        </button>
         <div className={styles.verticalLine} />
       </div>
     </div>

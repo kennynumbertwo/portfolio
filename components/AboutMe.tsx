@@ -32,7 +32,9 @@ function AboutMe(): JSX.Element {
           </div>
         </div>
         <div className={styles.rightSection}>
-          <Image src={headshot} width={399} height={468} />
+          <div className={styles.image}>
+            <Image src={headshot} width={399} height={468} />
+          </div>
         </div>
       </section>
     </>

@@ -1,7 +1,11 @@
 import styles from '../styles/ContactButton.module.css';
 
 function ContactButton() {
-  return <button className={styles.contactButton}>Get In Touch</button>;
+  return (
+    <a href="mailto: kennytye.dev@gmail.com" target="_blank">
+      <button className={styles.contactButton}>Get In Touch</button>
+    </a>
+  );
 }
 
 export default ContactButton;

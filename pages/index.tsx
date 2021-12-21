@@ -12,6 +12,7 @@ import Projects from '../components/Projects';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [orbPos, setOrbPos] = useState(0);
   // Listen for the window size
   useEffect(() => {
     if (window.innerWidth <= 576) {
@@ -27,6 +28,13 @@ const Home: NextPage = () => {
     }
     window.addEventListener('resize', handleMobileResize);
   }, [isMobile]);
+
+  useEffect(() => {
+    function handleScroll() {
+      setOrbPos(window.scrollY * 0.33);
+    }
+    window.addEventListener('scroll', handleScroll);
+  });
   return (
     <div className={styles.main}>
       <Head>
@@ -42,6 +50,7 @@ const Home: NextPage = () => {
         }}
         isMobile={isMobile}
       />
+      <div className="bgOvalOne" style={{ right: orbPos }} />
       <Introduction />
       <AboutMe />
       <Projects />

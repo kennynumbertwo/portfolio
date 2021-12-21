@@ -3,6 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  height: 650px;
 }
 .header {
   font-size: 2rem;
@@ -37,6 +38,9 @@
   padding: 0px 0 0;
   width: 400px;
   height: 500px;
+}
+.image {
+  box-shadow: 3px 3px 4px 5px rgba(0, 0, 0, 0.5);
 }
 .skillsListWrapper {
   width: 100%;

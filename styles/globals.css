@@ -61,6 +61,8 @@ button {
   font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
     Menlo, Consolas, monospace;
   color: white;
+  border: none;
+  background-color: rgba(2, 12, 27, 0);
 }
 
 :root {
@@ -90,4 +92,14 @@ button {
   --max-sm: 700px;
   --max-md: 950px;
   --max-lg: 1200px;
+}
+
+.bgOvalOne {
+  height: 800px;
+  width: 800px;
+  background-color: var(--background-circle-right);
+  border-radius: 50%;
+  position: fixed;
+  z-index: -1;
+  top: 50px;
 }

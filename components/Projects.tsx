@@ -79,13 +79,36 @@ function Projects(): JSX.Element {
           </button>
         </div>
         <div className={styles.containerInfo}>
-          <ProjectDetails
-            selected={selected}
-            headerText={projects[selected].headerText}
-            description={projects[selected].description}
-            skills={projects[selected].skills}
-            images={projects[selected].images}
-          />
+          {selected === 'flashcard' && (
+            <ProjectDetails
+              selected={selected}
+              headerText={projects.flashcard.headerText}
+              description={projects.flashcard.description}
+              skills={projects.flashcard.skills}
+              imageOne={projects.flashcard.images[0]}
+              imageTwo={projects.flashcard.images[1]}
+            />
+          )}
+          {selected === 'peermusic' && (
+            <ProjectDetails
+              selected={selected}
+              headerText={projects.peermusic.headerText}
+              description={projects.peermusic.description}
+              skills={projects.peermusic.skills}
+              imageOne={projects.peermusic.images[0]}
+              imageTwo={projects.peermusic.images[1]}
+            />
+          )}
+          {selected === 'destroybox' && (
+            <ProjectDetails
+              selected={selected}
+              headerText={projects.destroybox.headerText}
+              description={projects.destroybox.description}
+              skills={projects.destroybox.skills}
+              imageOne={projects.destroybox.images[0]}
+              imageTwo={projects.destroybox.images[1]}
+            />
+          )}
         </div>
       </div>
     </section>

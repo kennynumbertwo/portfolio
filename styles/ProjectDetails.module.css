@@ -17,10 +17,33 @@
   justify-content: center;
   align-items: center;
   box-shadow: 3px 3px 7px 3px rgba(0, 0, 0, 0.15);
+  animation: 350ms ease-in-out headerSlideIn;
+}
+@keyframes headerSlideIn {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 96%;
+  }
 }
 .headerBG h3 {
   font-size: 1.5rem;
   font-weight: 500;
+  animation: 600ms ease-in-out headerTextIn;
+}
+@keyframes headerTextIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .headerWrapper {
   width: 60%;
@@ -38,6 +61,15 @@
   font-family: var(--font-family-body);
   line-height: 1.4rem;
   font-size: 1.1rem;
+  animation: 1000ms ease-in-out descriptionTextIn;
+}
+@keyframes descriptionTextIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .skillsContainer {
   display: flex;
@@ -58,10 +90,14 @@
   margin: 5px;
   display: flex;
   box-shadow: 3px 3px 7px 3px rgba(0, 0, 0, 0.2);
+  animation: 700ms ease-in-out imageIn;
 }
 
-.screenshot {
-  animation: 500ms ease-in-out imageIn;
+.screenshotOne {
+  animation: 450ms ease-in-out imageIn;
+}
+.screenshotTwo {
+  animation: 600ms ease-in-out imageIn;
 }
 
 @keyframes imageIn {
