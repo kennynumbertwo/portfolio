@@ -13,12 +13,14 @@ function Orb() {
   const [orbPosX, setOrbPosX] = useState<number>(0);
   const [orbPosY, setOrbPosY] = useState<number>(0);
   const [orbSize, setOrbSize] = useState<number>(0);
+  const [orbOpacity, setOrbOpacity] = useState<number>(1);
   const [orbGrowth, setOrbGrowth] = useState<number>(0);
   const [orbColor, setOrbColor] = useState<string>('');
   const [orbSpeedHor, setOrbSpeedHor] = useState<number>(0);
   const [orbSpeedVert, setOrbSpeedVert] = useState<number>(0);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
   const [timer, setTimer] = useState<number>(0);
+  const [isFading, setIsFading] = useState<boolean>(false);
 
   useEffect(() => {
     initializeOrb();
@@ -27,17 +29,30 @@ function Orb() {
 
   useEffect(() => {
     if (isInitialized) {
+      if (timer > 100) {
+        let opacity = orbOpacity - 0.02;
+        let shrink = orbSize * 0.999;
+        setOrbOpacity(opacity);
+        setOrbSize(shrink);
+      }
       let x = orbPosX + orbSpeedHor / 10;
       let y = orbPosY + orbSpeedVert / 10;
       let g = orbSize + orbGrowth / 10;
       setOrbPosX(x);
       setOrbPosY(y);
-      setOrbSize(g);
+      if (timer <= 100) {
+        setOrbSize(g);
+      }
       setTimeout(() => {
         setTimer(timer + 0.1);
       }, 10);
     }
   }, [isInitialized, timer]);
+
+  useEffect(() => {
+    if (isInitialized) {
+    }
+  });
 
   useEffect(() => {
     if (isInitialized) window.addEventListener('scroll', handleScroll);
@@ -124,6 +139,7 @@ function Orb() {
         height: orbSize,
         width: `${orbSize}px`,
         backgroundColor: orbColor,
+        opacity: orbOpacity,
       }}
     />
   );
