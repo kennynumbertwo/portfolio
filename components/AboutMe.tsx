@@ -6,7 +6,9 @@ import SkillsList from '../components/SkillsList';
 function AboutMe(): JSX.Element {
   return (
     <>
-      <h2 className={styles.header}>About Me</h2>
+      <h2 className={styles.header} id="aboutMe">
+        About Me
+      </h2>
       <section className={styles.container}>
         <div className={styles.leftSection}>
           <div className={styles.textWrapper}>

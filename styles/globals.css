@@ -6,6 +6,7 @@ html {
     Menlo, Consolas, monospace;
   background-color: rgb(2, 12, 27);
   color: white;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -69,7 +70,7 @@ button {
   /* BACKGROUND COLORS */
   --background-primary: rgb(2, 12, 27);
   --background-circle-right: rgb(4, 21, 48);
-  --background-circle-left: rgba(55, 88, 102, 0.53);
+  --background-circle-left: rgba(154, 72, 43, 0.53);
   --background-projects-body: rgba(80, 237, 180, 0.37);
   --background-projects-selected: rgba(80, 237, 180, 0.1);
   --background-projects-text: rgb(18, 57, 58);
@@ -94,12 +95,17 @@ button {
   --max-lg: 1200px;
 }
 
-.bgOvalOne {
-  height: 800px;
-  width: 800px;
-  background-color: var(--background-circle-right);
+.orb {
   border-radius: 50%;
   position: fixed;
   z-index: -1;
-  top: 50px;
+  animation: 2500ms ease-in-out orbIn;
+}
+@keyframes orbIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

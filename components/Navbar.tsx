@@ -70,7 +70,7 @@ function Navbar({ navItemLeft, navItemsRight, isMobile }: NavbarProps) {
         <a className={styles.resumeText}>{navItemLeft}</a>
       </div>
       <div className={styles.linksWrapper}>
-        <a className={`${styles.navItem} ${styles.about}`}>
+        <a href="#aboutMe" className={`${styles.navItem} ${styles.about}`}>
           {navItemsRight.itemOne}
         </a>
         <a className={styles.navItem}>{navItemsRight.itemTwo}</a>
