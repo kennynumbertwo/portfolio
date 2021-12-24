@@ -26,6 +26,13 @@ const projects = {
     ],
     images: [flashcard_1, flashcard_2],
   },
+  portfolio: {
+    headerText: 'Web Development Portfolio',
+    description:
+      'I built this website with React, Next JS and Typescript. I was very focused on designing every component myself without the help of any libraries. I had the same mentality when I wrote the animations. ',
+    skills: ['React', 'TypeScript', 'Next JS', 'CSS Modules', 'HTML', 'CSS'],
+    images: [flashcard_1, flashcard_2],
+  },
   peermusic: {
     headerText: 'Peermusic Neighbouring Rights',
     description: 'I built this site with for peermusics Neighbouring Rights',
@@ -64,6 +71,13 @@ function Projects(): JSX.Element {
             <h3 className={styles.projectTitle}>Flashcards App</h3>
           </button>
           <button
+            className={`${styles.projectWrapper} ${getStyle('portfolio')}`}
+            onClick={() => handleClick('portfolio')}
+          >
+            <div className={`${styles.border} ${getStyle('portfolio')}`} />
+            <h3 className={styles.projectTitle}>Portfolio</h3>
+          </button>
+          <button
             className={`${styles.projectWrapper} ${getStyle('peermusic')}`}
             onClick={() => handleClick('peermusic')}
           >
@@ -87,6 +101,16 @@ function Projects(): JSX.Element {
               skills={projects.flashcard.skills}
               imageOne={projects.flashcard.images[0]}
               imageTwo={projects.flashcard.images[1]}
+            />
+          )}
+          {selected === 'portfolio' && (
+            <ProjectDetails
+              selected={selected}
+              headerText={projects.portfolio.headerText}
+              description={projects.portfolio.description}
+              skills={projects.portfolio.skills}
+              imageOne={projects.portfolio.images[0]}
+              imageTwo={projects.portfolio.images[1]}
             />
           )}
           {selected === 'peermusic' && (

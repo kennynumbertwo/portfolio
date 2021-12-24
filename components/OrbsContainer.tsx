@@ -16,6 +16,7 @@ function OrbsContainer() {
   const [orbTimer, setOrbTimer] = useState<number>(2000);
   const [isRunning, setIsRunning] = useState<boolean>(true);
 
+  // While isRunning, automatically creates orbs in the background
   useEffect(() => {
     if (isRunning) {
       if (orbs.length >= 2) {
@@ -23,8 +24,6 @@ function OrbsContainer() {
         setOrbs([...orbs, { id: `orb${orbCount}`, isFading: false }]);
       }
       if (orbs.length > 15) {
-        const firstOrb = orbs[0].id;
-        console.log(firstOrb);
         const newOrbs = [...orbs, { id: `orb${orbCount}`, isFading: false }];
         newOrbs[1].isFading = true;
         const updatedOrbs = newOrbs.slice(1);
@@ -39,8 +38,9 @@ function OrbsContainer() {
     }
   }, [orbCount, isRunning]);
 
+  // Click handler for the add orb button. If over a certain length, will delete an orb when a new orb is created.
   const handleAddOrbClick = () => {
-    if (userOrbs.length > 15) {
+    if (userOrbs.length > 20) {
       let userOrbsCopy = [...userOrbs];
       let updatedUserOrbs = userOrbsCopy.slice(1);
       let newUserOrbs = [
@@ -58,6 +58,8 @@ function OrbsContainer() {
       setOrbCountUser(orbCountUser + 1);
     }
   };
+
+  // Click handler for the clear orbs button
   const handleClearOrbClick = () => {
     const orbsCopy = [...orbs];
     const userOrbsCopy = [...userOrbs];
@@ -75,9 +77,12 @@ function OrbsContainer() {
     }, 200);
   };
 
+  // Click handler for the start orbs button
   const handleStartClick = () => {
     if (!isRunning) setIsRunning(true);
   };
+
+  // Click handler for the stop orbs button
   const handleStopClick = () => {
     if (isRunning) setIsRunning(false);
   };

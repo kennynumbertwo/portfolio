@@ -56,10 +56,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  height: 250px;
   width: 55%;
-  margin: auto auto 20px 40px;
+  margin: 30px auto 20px 40px;
   font-family: var(--font-family-body);
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   font-size: 1.1rem;
   animation: 1000ms ease-in-out descriptionTextIn;
 }
