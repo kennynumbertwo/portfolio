@@ -15,10 +15,10 @@ interface OrbProps {
   id: string;
   isFading: boolean;
   isUser: boolean;
+  scroll: number;
 }
 
-function Orb({ id, isFading, isUser }: OrbProps) {
-  const [scroll, setScroll] = useState<number>(0);
+function Orb({ id, isFading, isUser, scroll }: OrbProps) {
   const [orbPosX, setOrbPosX] = useState<number>(0);
   const [orbPosY, setOrbPosY] = useState<number>(0);
   const [orbSize, setOrbSize] = useState<number>(0);
@@ -65,11 +65,6 @@ function Orb({ id, isFading, isUser }: OrbProps) {
   }, [isInitialized, timer]);
 
   useEffect(() => {
-    if (isInitialized) window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isInitialized]);
-
-  useEffect(() => {
     if (isInitialized) {
       let x = orbPosX + orbSpeedHor;
       let y = orbPosY + orbSpeedVert;
@@ -79,10 +74,6 @@ function Orb({ id, isFading, isUser }: OrbProps) {
       setOrbSize(g);
     }
   }, [scroll]);
-
-  const handleScroll = () => {
-    setScroll(window.scrollY);
-  };
 
   const initializeOrb = () => {
     let x = Math.floor(Math.random() * 2000) - 500;
@@ -100,15 +91,6 @@ function Orb({ id, isFading, isUser }: OrbProps) {
     setOrbSpeedVert(speedY);
     setOrbGrowth(growth);
   };
-
-  // const orbTimer = () => {
-  //   let x = orbPosX + orbSpeedHor;
-  //   let y = orbPosY + orbSpeedVert;
-  //   let g = orbSize + orbGrowth;
-  //   setOrbPosX(x);
-  //   setOrbPosY(y);
-  //   setOrbSize(g);
-  // };
 
   const getSpeed = () => {
     let speed = Math.random() * 10;

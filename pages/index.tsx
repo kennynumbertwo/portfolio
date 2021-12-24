@@ -13,6 +13,7 @@ import OrbsContainer from '../components/OrbsContainer';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isShowingFooterLink, setIsShowingFooterLink] = useState(true);
 
   // Listen for the window size
   useEffect(() => {
@@ -29,6 +30,18 @@ const Home: NextPage = () => {
     }
     window.addEventListener('resize', handleMobileResize);
   }, [isMobile]);
+
+  const handleShowFooterLink = () => {
+    if (!isShowingFooterLink) {
+      setIsShowingFooterLink(true);
+    }
+  };
+
+  const handleHideFooterLink = () => {
+    if (isShowingFooterLink) {
+      setIsShowingFooterLink(false);
+    }
+  };
 
   return (
     <div className={styles.main}>
@@ -50,8 +63,12 @@ const Home: NextPage = () => {
       <AboutMe />
       <Projects />
       <Contact />
-      <LinkFooter />
-      <Footer />
+      <LinkFooter isShowingFooterLink={isShowingFooterLink} />
+      <Footer
+        handleShowFooterLink={handleShowFooterLink}
+        handleHideFooterLink={handleHideFooterLink}
+        isShowingFooterLink={isShowingFooterLink}
+      />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 import styles from '../styles/Footer.module.css';
 import DiscordIcon from './icons/Discord';
 import GithubIcon from './icons/Github';
@@ -6,14 +7,35 @@ import LinkedInIcon from './icons/LinkedIn';
 import MailIcon from './icons/Mail';
 import copy from 'copy-to-clipboard';
 
-function Footer() {
+function Footer({
+  handleShowFooterLink,
+  handleHideFooterLink,
+  isShowingFooterLink,
+}) {
   const handleCopyClick = (link: string) => {
     copy(link);
   };
 
+  const footerRef = useRef<HTMLDivElement>(null!);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => checkIsVisible());
+    return () => window.removeEventListener('scroll', () => checkIsVisible());
+  }, [isShowingFooterLink]);
+
+  const checkIsVisible = () => {
+    const rect = footerRef.current.getBoundingClientRect();
+    if (rect.bottom <= window.innerHeight) {
+      handleHideFooterLink();
+    }
+    if (rect.top < window.innerHeight - 50) {
+      handleShowFooterLink();
+    }
+  };
+
   return (
     <footer className={styles.container}>
-      <div className={styles.iconsWrapper}>
+      <div ref={footerRef} className={styles.iconsWrapper}>
         <Link href={'https://github.com/kennynumbertwo'}>
           <a target="_blank">
             <span className={styles.iconGithub}>

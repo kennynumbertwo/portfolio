@@ -9,12 +9,22 @@ interface NewOrb {
 }
 
 function OrbsContainer() {
+  const [scroll, setScroll] = useState<number>(0);
   const [orbs, setOrbs] = useState<Array<NewOrb>>([]);
   const [userOrbs, setUserOrbs] = useState<Array<NewOrb>>([]);
   const [orbCount, setOrbCount] = useState<number>(1);
   const [orbCountUser, setOrbCountUser] = useState<number>(1);
   const [orbTimer, setOrbTimer] = useState<number>(2000);
   const [isRunning, setIsRunning] = useState<boolean>(true);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
 
   // While isRunning, automatically creates orbs in the background
   useEffect(() => {
@@ -90,10 +100,22 @@ function OrbsContainer() {
   return (
     <div className={styles.container}>
       {orbs.map((orb) => (
-        <Orb key={orb.id} id={orb.id} isFading={orb.isFading} isUser={false} />
+        <Orb
+          key={orb.id}
+          id={orb.id}
+          isFading={orb.isFading}
+          isUser={false}
+          scroll={scroll}
+        />
       ))}
       {userOrbs.map((orb) => (
-        <Orb key={orb.id} id={orb.id} isFading={orb.isFading} isUser={true} />
+        <Orb
+          key={orb.id}
+          id={orb.id}
+          isFading={orb.isFading}
+          isUser={true}
+          scroll={scroll}
+        />
       ))}
       <LinkFooterBubble
         handleAddOrbClick={handleAddOrbClick}
