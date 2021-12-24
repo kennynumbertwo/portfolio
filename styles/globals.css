@@ -70,8 +70,8 @@ button {
   /* BACKGROUND COLORS */
   --background-primary: rgb(2, 12, 27);
   --background-circle-right: rgb(4, 21, 48);
-  --background-circle-left: rgba(154, 72, 43, 0.53);
-  --background-projects-body: rgba(80, 237, 180, 0.37);
+  --background-circle-left: rgba(7, 31, 69, 0.8);
+  --background-projects-body: rgba(31, 106, 89, 1);
   --background-projects-selected: rgba(80, 237, 180, 0.1);
   --background-projects-text: rgb(18, 57, 58);
   --background-projects-text-hover: rgba(18, 57, 58, 0.5);
@@ -104,6 +104,25 @@ button {
 @keyframes orbIn {
   0% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.userOrb {
+  border-radius: 50%;
+  position: fixed;
+  z-index: -1;
+  animation: 200ms ease-in-out userOrbIn;
+}
+@keyframes userOrbIn {
+  0% {
+    opacity: 0;
+    /* width: calc(100% / 10);
+    height: calc(100% / 10); */
+  }
+  50% {
+    opacity: 0.3;
   }
   100% {
     opacity: 1;

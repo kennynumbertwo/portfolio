@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 
 const orbColors = [
-  'rgba(4, 21, 48, 0.8)',
-  'rgba(55, 88, 102, 0.53)',
-  'rgba(55, 59, 102, 0.53)',
-  'rgba(16, 80, 58, 0.53)',
-  'rgba(154, 72, 43, 0.30)',
+  'rgba(7, 31, 69, 0.5)',
+  'rgba(55, 88, 102, 0.5)',
+  'rgba(55, 59, 102, 0.5)',
+  'rgba(16, 80, 58, 0.5)',
+  'rgba(154, 72, 43, 0.3)',
+  'rgba(213, 111, 79, 0.2)',
+  'rgba(79, 213, 95, 0.2)',
+  'rgba(143, 57, 130, 0.3)',
 ];
 
 interface OrbProps {
   id: string;
   isFading: boolean;
+  isUser: boolean;
 }
 
-function Orb({ id, isFading }: OrbProps) {
+function Orb({ id, isFading, isUser }: OrbProps) {
   const [scroll, setScroll] = useState<number>(0);
   const [orbPosX, setOrbPosX] = useState<number>(0);
   const [orbPosY, setOrbPosY] = useState<number>(0);
@@ -33,25 +37,25 @@ function Orb({ id, isFading }: OrbProps) {
 
   useEffect(() => {
     if (isInitialized) {
+      let x = orbPosX + orbSpeedHor / 10;
+      let y = orbPosY + orbSpeedVert / 10;
+      let g = orbSize + orbGrowth / 10;
+      setOrbPosX(x);
+      setOrbPosY(y);
       if (timer > 100) {
         let opacity = orbOpacity - 0.02;
         let shrink = orbSize * 0.999;
         setOrbOpacity(opacity);
         setOrbSize(shrink);
       }
+      if (timer <= 100) {
+        setOrbSize(g);
+      }
       if (isFading) {
         let opacity = orbOpacity - 0.02;
         let shrink = orbSize * 0.999;
         setOrbOpacity(opacity);
         setOrbSize(shrink);
-      }
-      let x = orbPosX + orbSpeedHor / 10;
-      let y = orbPosY + orbSpeedVert / 10;
-      let g = orbSize + orbGrowth / 10;
-      setOrbPosX(x);
-      setOrbPosY(y);
-      if (timer <= 100) {
-        setOrbSize(g);
       }
       const timeout = setTimeout(() => {
         setTimer(timer + 0.1);
@@ -97,14 +101,14 @@ function Orb({ id, isFading }: OrbProps) {
     setOrbGrowth(growth);
   };
 
-  const orbTimer = () => {
-    let x = orbPosX + orbSpeedHor;
-    let y = orbPosY + orbSpeedVert;
-    let g = orbSize + orbGrowth;
-    setOrbPosX(x);
-    setOrbPosY(y);
-    setOrbSize(g);
-  };
+  // const orbTimer = () => {
+  //   let x = orbPosX + orbSpeedHor;
+  //   let y = orbPosY + orbSpeedVert;
+  //   let g = orbSize + orbGrowth;
+  //   setOrbPosX(x);
+  //   setOrbPosY(y);
+  //   setOrbSize(g);
+  // };
 
   const getSpeed = () => {
     let speed = Math.random() * 10;
@@ -139,7 +143,7 @@ function Orb({ id, isFading }: OrbProps) {
 
   return (
     <div
-      className="orb"
+      className={isUser ? 'userOrb' : 'orb'}
       style={{
         left: orbPosX,
         top: orbPosY,
