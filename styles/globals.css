@@ -128,3 +128,11 @@ button {
     opacity: 1;
   }
 }
+@keyframes animateOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -10,8 +10,11 @@
 .iconPause {
   animation: 600ms ease-in-out iconsIn;
 }
-.iconQuestion {
+.iconMinus {
   animation: 600ms ease-in-out iconsIn;
+}
+.iconQuestion {
+  animation: 100ms ease-in-out iconsIn;
 }
 
 .iconAdd svg:hover {
@@ -26,8 +29,13 @@
 .iconPause svg:hover {
   stroke: var(--font-header-green);
 }
+.iconMinus svg:hover {
+  stroke: var(--font-header-green);
+  transform: translateY(0px);
+}
 .iconQuestion svg:hover {
   stroke: var(--font-header-green);
+  transform: translateY(0px);
 }
 
 .iconsWrapperOuter {
@@ -59,7 +67,10 @@
   margin: 20px 0 0;
   background-color: white;
 }
-
+.controller {
+  display: flex;
+  flex-direction: column;
+}
 @keyframes iconsIn {
   0% {
     opacity: 0;
@@ -70,7 +81,6 @@
     transform: translateY(0%);
   }
 }
-
 @keyframes iconIn {
   0% {
     opacity: 0;
@@ -79,5 +89,15 @@
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@keyframes animateOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
   }
 }
