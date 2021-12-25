@@ -10,6 +10,13 @@
 .resumeWrapper {
   margin-right: auto;
 }
+.resumeText {
+  margin-right: 15px;
+  transition: all 250ms ease-in-out;
+}
+.resumeText:hover {
+  color: var(--font-header-green);
+}
 .linksWrapper {
   width: 50%;
   display: flex;
