@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
@@ -13,7 +13,32 @@ import OrbsContainer from '../components/OrbsContainer';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isShowingFooterLink, setIsShowingFooterLink] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState<string>('');
+
+  // Scroll Refs
+  const aboutRef = useRef<HTMLDivElement>(null!);
+  const projectsRef = useRef<HTMLDivElement>(null!);
+  const contactRef = useRef<HTMLDivElement>(null!);
+
+  useEffect(() => {
+    if (scrollPosition === 'about') {
+      window.scrollTo(0, aboutRef.current.offsetTop - 40);
+      setScrollPosition('');
+    }
+    if (scrollPosition === 'projects') {
+      window.scrollTo(0, projectsRef.current.offsetTop - 40);
+      setScrollPosition('');
+    }
+    if (scrollPosition === 'contact') {
+      window.scrollTo(0, contactRef.current.offsetTop);
+      setScrollPosition('');
+    }
+  }, [scrollPosition]);
+
+  // scrollFunction
+  const executeScroll = (refId: string) => {
+    setScrollPosition(refId);
+  };
 
   // Listen for the window size
   useEffect(() => {
@@ -31,18 +56,6 @@ const Home: NextPage = () => {
     window.addEventListener('resize', handleMobileResize);
   }, [isMobile]);
 
-  const handleShowFooterLink = () => {
-    if (!isShowingFooterLink) {
-      setIsShowingFooterLink(true);
-    }
-  };
-
-  const handleHideFooterLink = () => {
-    if (isShowingFooterLink) {
-      setIsShowingFooterLink(false);
-    }
-  };
-
   return (
     <div className={styles.main}>
       <Head>
@@ -58,17 +71,17 @@ const Home: NextPage = () => {
           itemThree: 'Contact',
         }}
         isMobile={isMobile}
+        executeScroll={executeScroll}
       />
       <Introduction />
+      <div ref={aboutRef} />
       <AboutMe />
+      <div ref={projectsRef} />
       <Projects />
+      <div ref={contactRef} />
       <Contact />
-      <LinkFooter isShowingFooterLink={isShowingFooterLink} />
-      <Footer
-        handleShowFooterLink={handleShowFooterLink}
-        handleHideFooterLink={handleHideFooterLink}
-        isShowingFooterLink={isShowingFooterLink}
-      />
+      <LinkFooter />
+      <Footer isMobile={isMobile} />
     </div>
   );
 };

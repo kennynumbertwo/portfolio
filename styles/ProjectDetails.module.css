@@ -56,6 +56,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
   height: 250px;
   width: 55%;
   margin: 30px auto 20px 40px;
@@ -63,6 +64,20 @@
   line-height: 1.5rem;
   font-size: 1.1rem;
   animation: 1000ms ease-in-out descriptionTextIn;
+}
+.iconContainer {
+  width: 100%;
+  margin: auto 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.iconContainer svg {
+  margin: 10px 20px 0px 0px;
+  transition: 300ms all ease-in-out;
+}
+.iconContainer svg:hover {
+  stroke: var(--font-header-green);
 }
 @keyframes descriptionTextIn {
   0% {
@@ -91,6 +106,11 @@
   margin: 5px;
   display: flex;
   box-shadow: 3px 3px 7px 3px rgba(0, 0, 0, 0.2);
+  animation: 700ms ease-in-out imageIn;
+}
+.imagePortfolio {
+  margin: 5px;
+  display: flex;
   animation: 700ms ease-in-out imageIn;
 }
 

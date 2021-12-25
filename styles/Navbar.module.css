@@ -4,6 +4,7 @@
   align-items: center;
   height: 100px;
   width: 90%;
+  z-index: 1;
   /* border: 1px solid white; */
 }
 .resumeWrapper {
@@ -21,7 +22,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transition: all 300ms ease-in-out;
   /* border: 1px solid white; */
+}
+.navItem:hover {
+  cursor: pointer;
+  color: var(--font-header-green);
 }
 
 .about {

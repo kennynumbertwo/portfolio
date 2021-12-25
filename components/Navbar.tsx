@@ -1,5 +1,5 @@
 import styles from '../styles/Navbar.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 
 interface NavbarProps {
   navItemLeft: string;
@@ -9,9 +9,15 @@ interface NavbarProps {
     itemThree: string;
   };
   isMobile: boolean;
+  executeScroll(refId: string): any;
 }
 
-function Navbar({ navItemLeft, navItemsRight, isMobile }: NavbarProps) {
+function Navbar({
+  navItemLeft,
+  navItemsRight,
+  isMobile,
+  executeScroll,
+}: NavbarProps) {
   const [isActive, setIsActive] = useState(false);
   const [isShowing, setIsShowing] = useState(false);
 
@@ -53,7 +59,10 @@ function Navbar({ navItemLeft, navItemsRight, isMobile }: NavbarProps) {
               <a className={styles.resumeText}>{navItemLeft}</a>
             </div>
             <div className={styles.linksWrapper}>
-              <a className={`${styles.navItem} ${styles.about}`}>
+              <a
+                className={`${styles.navItem} ${styles.about}`}
+                onClick={() => executeScroll('about')}
+              >
                 {navItemsRight.itemOne}
               </a>
               <a className={styles.navItem}>{navItemsRight.itemTwo}</a>
@@ -70,11 +79,18 @@ function Navbar({ navItemLeft, navItemsRight, isMobile }: NavbarProps) {
         <a className={styles.resumeText}>{navItemLeft}</a>
       </div>
       <div className={styles.linksWrapper}>
-        <a href="#aboutMe" className={`${styles.navItem} ${styles.about}`}>
+        <a
+          className={`${styles.navItem} ${styles.about}`}
+          onClick={() => executeScroll('about')}
+        >
           {navItemsRight.itemOne}
         </a>
-        <a className={styles.navItem}>{navItemsRight.itemTwo}</a>
-        <a className={styles.navItem}>{navItemsRight.itemThree}</a>
+        <a className={styles.navItem} onClick={() => executeScroll('projects')}>
+          {navItemsRight.itemTwo}
+        </a>
+        <a className={styles.navItem} onClick={() => executeScroll('contact')}>
+          {navItemsRight.itemThree}
+        </a>
       </div>
     </nav>
   );
