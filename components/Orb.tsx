@@ -16,9 +16,10 @@ interface OrbProps {
   isFading: boolean;
   isUser: boolean;
   scroll: number;
+  isMobile: boolean;
 }
 
-function Orb({ id, isFading, isUser, scroll }: OrbProps) {
+function Orb({ id, isFading, isUser, scroll, isMobile }: OrbProps) {
   const [orbPosX, setOrbPosX] = useState<number>(0);
   const [orbPosY, setOrbPosY] = useState<number>(0);
   const [orbSize, setOrbSize] = useState<number>(0);
@@ -76,15 +77,23 @@ function Orb({ id, isFading, isUser, scroll }: OrbProps) {
   }, [scroll]);
 
   const initializeOrb = () => {
-    let x = Math.floor(Math.random() * 2000) - 500;
-    let y = Math.floor(Math.random() * 500);
+    if (isMobile) {
+      let x = Math.floor(Math.random() * 576) - 250;
+      let y = Math.floor(Math.random() * 500);
+      setOrbPosX(x);
+      setOrbPosY(y);
+    }
+    if (!isMobile) {
+      let x = Math.floor(Math.random() * 2000) - 500;
+      let y = Math.floor(Math.random() * 500);
+      setOrbPosX(x);
+      setOrbPosY(y);
+    }
     let speedX = getSpeed();
     let speedY = getSpeed();
     let growth = getGrowth();
     let size = getSize();
     let color = getColor();
-    setOrbPosX(x);
-    setOrbPosY(y);
     setOrbSize(size);
     setOrbColor(color);
     setOrbSpeedHor(speedX);

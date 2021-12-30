@@ -1,0 +1,105 @@
+.iconAdd {
+  animation: 750ms ease-in-out iconsIn;
+}
+.iconTrash {
+  animation: 700ms ease-in-out iconsIn;
+}
+.iconPlay {
+  animation: 650ms ease-in-out iconsIn;
+}
+.iconPause {
+  animation: 600ms ease-in-out iconsIn;
+}
+.iconMinus {
+  animation: 600ms ease-in-out iconsIn;
+}
+.iconQuestion {
+  animation: 100ms ease-in-out iconsIn;
+}
+
+.iconsWrapperOuter {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 5%;
+  animation: 550ms ease-in-out iconsIn;
+  width: 40px;
+  height: 300px;
+}
+.iconsWrapperInner {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-links-mobile);
+  border-radius: 50px;
+  transition: all 250ms;
+}
+.iconsWrapperInner svg {
+  margin: 13px 0px;
+  transition: all 250ms;
+}
+.controller {
+  display: flex;
+  flex-direction: column;
+}
+.iconsWrapperOuterMobile {
+  display: block;
+  position: fixed;
+  bottom: -8px;
+  left: auto;
+  right: 5%;
+  width: 40px;
+  height: 75px;
+}
+.iconsWrapperInnerMobile {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-links-mobile);
+  border-radius: 50px;
+}
+.iconsWrapperInnerMobile svg {
+  margin: 15px 0px;
+  transition: all 250ms;
+}
+.controller {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes iconsIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes iconIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* @keyframes animateOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+} */

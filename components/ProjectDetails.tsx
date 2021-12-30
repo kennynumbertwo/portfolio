@@ -43,7 +43,7 @@ function ProjectDetails({
             <Link href={links.github}>
               <a target="_blank">
                 <span>
-                  <GithubIcon />
+                  <GithubIcon size={24} />
                 </span>
               </a>
             </Link>

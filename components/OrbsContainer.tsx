@@ -2,6 +2,7 @@ import styles from '../styles/OrbsContainer.module.css';
 import { useEffect, useState } from 'react';
 import Orb from './Orb';
 import LinkFooterBubble from './LinkFooterBubble';
+import LinkFooterBubbleMobile from './LinkFooterBubbleMobile';
 
 interface NewOrb {
   id: string;
@@ -118,9 +119,17 @@ function OrbsContainer({ isMobile }: OrbsContainerProps) {
           isFading={orb.isFading}
           isUser={true}
           scroll={scroll}
+          isMobile={isMobile}
         />
       ))}
-      {!isMobile && (
+      {isMobile ? (
+        <LinkFooterBubbleMobile
+          handleAddOrbClick={handleAddOrbClick}
+          handleClearOrbClick={handleClearOrbClick}
+          handleStartClick={handleStartClick}
+          handleStopClick={handleStopClick}
+        />
+      ) : (
         <LinkFooterBubble
           handleAddOrbClick={handleAddOrbClick}
           handleClearOrbClick={handleClearOrbClick}

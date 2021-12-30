@@ -69,8 +69,7 @@ button {
 :root {
   /* BACKGROUND COLORS */
   --background-primary: rgb(2, 12, 27);
-  --background-circle-right: rgb(4, 21, 48);
-  --background-circle-left: rgba(7, 31, 69, 0.8);
+  --background-links-mobile: rgba(15, 31, 50, 0.8);
   --background-projects-body: rgba(31, 106, 89, 1);
   --background-projects-selected: rgba(80, 237, 180, 0.1);
   --background-projects-text: rgb(18, 57, 58);

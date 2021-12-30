@@ -10,6 +10,7 @@ import styles from '../styles/Home.module.css';
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
 import OrbsContainer from '../components/OrbsContainer';
+import LinkFooterMobile from '../components/LinkFooterMobile';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -80,8 +81,8 @@ const Home: NextPage = () => {
       {isMobile ? null : <Projects />}
       <div ref={contactRef} />
       <Contact />
-      {!isMobile && <LinkFooter />}
-      <Footer isMobile={isMobile} />
+      {isMobile ? <LinkFooterMobile /> : <LinkFooter />}
+      <Footer />
     </div>
   );
 };
