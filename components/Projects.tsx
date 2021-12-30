@@ -13,14 +13,14 @@ import portfolio_2 from '../public/projects/portfolio_2.png';
 
 const projects = {
   flashcard: {
-    headerText: 'A Flashcard Application built with React',
+    headerText: 'Flashcard Application',
     description:
       'This is a full featured flashcard application I built with React and Firebase Firestore. The application allows individual users to create, edit and delete decks within their personal collection. The user can also track their knowledge through the mastery rating tracked on each run through the deck. On top of that, there are a large number of stock decks a user can choose from and add to their collection. I wrote Python web scrapers to collect and catalog all of the stock decks in the collection.',
     skills: [
       'React',
       'JavaScript',
-      'Firebase Firestore',
-      'Material UI',
+      'Firebase',
+      'MUI',
       'JSS',
       'React Router',
       'Python',
@@ -82,8 +82,11 @@ const projects = {
     },
   },
 };
+interface ProjectsProps {
+  isMobile: boolean;
+}
 
-function Projects(): JSX.Element {
+function Projects({ isMobile }: ProjectsProps): JSX.Element {
   const [selected, setSelected] = useState<string>('flashcard');
 
   const getStyle = (id: string) => {
@@ -96,86 +99,95 @@ function Projects(): JSX.Element {
   };
 
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.containerMain}>
-        <div className={styles.containerProject}>
-          <button
-            className={`${styles.projectWrapper} ${getStyle('flashcard')}`}
-            onClick={() => handleClick('flashcard')}
-          >
-            <div className={`${styles.border} ${getStyle('flashcard')}`} />
-            <h3 className={styles.projectTitle}>Flashcards App</h3>
-          </button>
-          <button
-            className={`${styles.projectWrapper} ${getStyle('portfolio')}`}
-            onClick={() => handleClick('portfolio')}
-          >
-            <div className={`${styles.border} ${getStyle('portfolio')}`} />
-            <h3 className={styles.projectTitle}>Portfolio</h3>
-          </button>
-          <button
-            className={`${styles.projectWrapper} ${getStyle('peermusic')}`}
-            onClick={() => handleClick('peermusic')}
-          >
-            <div className={`${styles.border} ${getStyle('peermusic')}`} />
-            <h3 className={styles.projectTitle}>Peermusic</h3>
-          </button>
-          <button
-            className={`${styles.projectWrapper} ${getStyle('destroybox')}`}
-            onClick={() => handleClick('destroybox')}
-          >
-            <div className={`${styles.border} ${getStyle('destroybox')}`} />
-            <h3 className={styles.projectTitle}>Destroybox</h3>
-          </button>
+    <>
+      <h2 className={styles.header} id="aboutMe">
+        Projects
+      </h2>
+      <section className={styles.wrapper}>
+        <div className={styles.containerMain}>
+          <div className={styles.containerProject}>
+            <button
+              className={`${styles.projectWrapper} ${getStyle('flashcard')}`}
+              onClick={() => handleClick('flashcard')}
+            >
+              <div className={`${styles.border} ${getStyle('flashcard')}`} />
+              <h3 className={styles.projectTitle}>Flashcard</h3>
+            </button>
+            <button
+              className={`${styles.projectWrapper} ${getStyle('portfolio')}`}
+              onClick={() => handleClick('portfolio')}
+            >
+              <div className={`${styles.border} ${getStyle('portfolio')}`} />
+              <h3 className={styles.projectTitle}>Portfolio</h3>
+            </button>
+            <button
+              className={`${styles.projectWrapper} ${getStyle('peermusic')}`}
+              onClick={() => handleClick('peermusic')}
+            >
+              <div className={`${styles.border} ${getStyle('peermusic')}`} />
+              <h3 className={styles.projectTitle}>Peermusic</h3>
+            </button>
+            <button
+              className={`${styles.projectWrapper} ${getStyle('destroybox')}`}
+              onClick={() => handleClick('destroybox')}
+            >
+              <div className={`${styles.border} ${getStyle('destroybox')}`} />
+              <h3 className={styles.projectTitle}>Destroy Box</h3>
+            </button>
+          </div>
+          <div className={styles.containerInfo}>
+            {selected === 'flashcard' && (
+              <ProjectDetails
+                selected={selected}
+                headerText={projects.flashcard.headerText}
+                description={projects.flashcard.description}
+                skills={projects.flashcard.skills}
+                imageOne={projects.flashcard.images[0]}
+                imageTwo={projects.flashcard.images[1]}
+                links={projects.flashcard.links}
+                isMobile={isMobile}
+              />
+            )}
+            {selected === 'portfolio' && (
+              <ProjectDetails
+                selected={selected}
+                headerText={projects.portfolio.headerText}
+                description={projects.portfolio.description}
+                skills={projects.portfolio.skills}
+                imageOne={projects.portfolio.images[0]}
+                imageTwo={projects.portfolio.images[1]}
+                links={projects.portfolio.links}
+                isMobile={isMobile}
+              />
+            )}
+            {selected === 'peermusic' && (
+              <ProjectDetails
+                selected={selected}
+                headerText={projects.peermusic.headerText}
+                description={projects.peermusic.description}
+                skills={projects.peermusic.skills}
+                imageOne={projects.peermusic.images[0]}
+                imageTwo={projects.peermusic.images[1]}
+                links={projects.peermusic.links}
+                isMobile={isMobile}
+              />
+            )}
+            {selected === 'destroybox' && (
+              <ProjectDetails
+                selected={selected}
+                headerText={projects.destroybox.headerText}
+                description={projects.destroybox.description}
+                skills={projects.destroybox.skills}
+                imageOne={projects.destroybox.images[0]}
+                imageTwo={projects.destroybox.images[1]}
+                links={projects.destroybox.links}
+                isMobile={isMobile}
+              />
+            )}
+          </div>
         </div>
-        <div className={styles.containerInfo}>
-          {selected === 'flashcard' && (
-            <ProjectDetails
-              selected={selected}
-              headerText={projects.flashcard.headerText}
-              description={projects.flashcard.description}
-              skills={projects.flashcard.skills}
-              imageOne={projects.flashcard.images[0]}
-              imageTwo={projects.flashcard.images[1]}
-              links={projects.flashcard.links}
-            />
-          )}
-          {selected === 'portfolio' && (
-            <ProjectDetails
-              selected={selected}
-              headerText={projects.portfolio.headerText}
-              description={projects.portfolio.description}
-              skills={projects.portfolio.skills}
-              imageOne={projects.portfolio.images[0]}
-              imageTwo={projects.portfolio.images[1]}
-              links={projects.portfolio.links}
-            />
-          )}
-          {selected === 'peermusic' && (
-            <ProjectDetails
-              selected={selected}
-              headerText={projects.peermusic.headerText}
-              description={projects.peermusic.description}
-              skills={projects.peermusic.skills}
-              imageOne={projects.peermusic.images[0]}
-              imageTwo={projects.peermusic.images[1]}
-              links={projects.peermusic.links}
-            />
-          )}
-          {selected === 'destroybox' && (
-            <ProjectDetails
-              selected={selected}
-              headerText={projects.destroybox.headerText}
-              description={projects.destroybox.description}
-              skills={projects.destroybox.skills}
-              imageOne={projects.destroybox.images[0]}
-              imageTwo={projects.destroybox.images[1]}
-              links={projects.destroybox.links}
-            />
-          )}
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

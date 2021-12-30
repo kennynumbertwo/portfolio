@@ -10,6 +10,10 @@
 .iconMail {
   animation: 600ms ease-in-out iconsIn;
 }
+.iconClip svg {
+  animation: 200ms ease-in-out iconsIn;
+  stroke: var(--font-header-green);
+}
 
 .iconsWrapperOuter {
   display: block;
@@ -54,6 +58,18 @@
   flex-direction: column;
   background-color: var(--background-links-mobile);
   border-radius: 50px;
+}
+.iconsWrapperInnerMobile:hover {
+  cursor: pointer;
+}
+.iconsWrapperInnerMobile svg:hover {
+  cursor: pointer;
+}
+.iconsWrapperInner:hover {
+  cursor: pointer;
+}
+.iconsWrapperInner svg:hover {
+  cursor: pointer;
 }
 .iconsWrapperInnerMobile svg {
   margin: 15px 0px;

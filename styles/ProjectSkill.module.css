@@ -29,3 +29,18 @@
   color: var(--font-header-green);
   background-color: var(--background-projects-text-hover);
 }
+@media only screen and (max-width: 1800px) {
+  .container p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container p {
+    font-size: 0.7rem;
+  }
+}

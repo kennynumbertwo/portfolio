@@ -10,6 +10,10 @@
 .iconMail {
   animation: 600ms ease-in-out iconsIn;
 }
+.iconClip svg {
+  animation: 200ms ease-in-out iconCopyIn;
+  stroke: var(--font-header-green);
+}
 .iconGithub svg:hover {
   stroke: var(--font-header-green);
 }
@@ -70,5 +74,13 @@
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@keyframes iconCopyIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

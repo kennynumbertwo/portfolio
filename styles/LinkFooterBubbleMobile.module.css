@@ -26,6 +26,7 @@
   animation: 550ms ease-in-out iconsIn;
   width: 40px;
   height: 300px;
+  z-index: 5;
 }
 .iconsWrapperInner {
   width: 100%;
@@ -54,6 +55,7 @@
   right: 5%;
   width: 40px;
   height: 75px;
+  z-index: 5;
 }
 .iconsWrapperInnerMobile {
   width: 100%;
@@ -93,13 +95,3 @@
     transform: translateY(0%);
   }
 }
-/* @keyframes animateOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-} */

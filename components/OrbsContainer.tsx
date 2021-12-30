@@ -10,9 +10,10 @@ interface NewOrb {
 }
 interface OrbsContainerProps {
   isMobile: boolean;
+  isMidsize: boolean;
 }
 
-function OrbsContainer({ isMobile }: OrbsContainerProps) {
+function OrbsContainer({ isMobile, isMidsize }: OrbsContainerProps) {
   const [scroll, setScroll] = useState<number>(0);
   const [orbs, setOrbs] = useState<Array<NewOrb>>([]);
   const [userOrbs, setUserOrbs] = useState<Array<NewOrb>>([]);
@@ -123,7 +124,7 @@ function OrbsContainer({ isMobile }: OrbsContainerProps) {
           isMobile={isMobile}
         />
       ))}
-      {isMobile ? (
+      {isMidsize || isMobile ? (
         <LinkFooterBubbleMobile
           handleAddOrbClick={handleAddOrbClick}
           handleClearOrbClick={handleClearOrbClick}

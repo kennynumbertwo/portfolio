@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 650px;
+  min-height: 650px;
 }
 .header {
   font-size: 2rem;
@@ -49,10 +49,10 @@
 .skillsListWrapper {
   width: 100%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .container {
     flex-direction: column-reverse;
-    width: 85%;
+    width: 80%;
     /* border: 1px solid blue; */
     height: 100%;
     margin: 0 0 50px;
@@ -83,5 +83,9 @@
   .text {
     padding: 0;
     font-size: 1rem;
+    font-weight: 300;
+  }
+  .header {
+    font-size: 1.7rem;
   }
 }

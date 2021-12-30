@@ -10,6 +10,7 @@ interface ProjectDetailsProps {
   headerText: string;
   description: string;
   skills: string[];
+  isMobile: boolean;
   imageOne: StaticImageData;
   imageTwo: StaticImageData;
   links: {
@@ -28,6 +29,7 @@ function ProjectDetails({
   imageOne,
   imageTwo,
   links,
+  isMobile,
 }: ProjectDetailsProps): JSX.Element {
   return (
     <div className={styles.container}>
@@ -35,40 +37,6 @@ function ProjectDetails({
         <div className={styles.headerWrapper}>
           <h3>{headerText}</h3>
         </div>
-      </div>
-      <div className={styles.descriptionContainer}>
-        <p>{description}</p>
-        <div className={styles.iconContainer}>
-          {links.isShowingGithub && (
-            <Link href={links.github}>
-              <a target="_blank">
-                <span>
-                  <GithubIcon size={24} />
-                </span>
-              </a>
-            </Link>
-          )}
-          {links.isShowingExternal && (
-            <Link href={links.external}>
-              <a target="_blank">
-                <span>
-                  <ExternalLink />
-                </span>
-              </a>
-            </Link>
-          )}
-        </div>
-      </div>
-      <div className={styles.skillsContainer}>
-        {skills.map((skill, index) => {
-          return (
-            <ProjectSkill
-              key={`${selected}-${skill}`}
-              text={skill}
-              delay={index}
-            />
-          );
-        })}
       </div>
       {selected !== 'portfolio' ? (
         <div className={styles.imageContainer}>
@@ -109,6 +77,40 @@ function ProjectDetails({
           </div>
         </div>
       )}
+      <div className={styles.descriptionContainer}>
+        <p>{description}</p>
+        <div className={styles.iconContainer}>
+          {links.isShowingGithub && (
+            <Link href={links.github}>
+              <a target="_blank">
+                <span>
+                  <GithubIcon size={isMobile ? 20 : 24} />
+                </span>
+              </a>
+            </Link>
+          )}
+          {links.isShowingExternal && (
+            <Link href={links.external}>
+              <a target="_blank">
+                <span>
+                  <ExternalLink size={isMobile ? 20 : 24} />
+                </span>
+              </a>
+            </Link>
+          )}
+        </div>
+      </div>
+      <div className={styles.skillsContainer}>
+        {skills.map((skill, index) => {
+          return (
+            <ProjectSkill
+              key={`${selected}-${skill}`}
+              text={skill}
+              delay={index}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
