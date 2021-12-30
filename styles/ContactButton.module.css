@@ -14,3 +14,11 @@
   color: var(--font-header-green);
   cursor: pointer;
 }
+
+@media only screen and (max-width: 576px) {
+  .contactButton {
+    height: 40px;
+    width: 125px;
+    font-size: 0.75rem;
+  }
+}

@@ -24,14 +24,41 @@
   font-size: 1.2rem;
   font-weight: 200;
   letter-spacing: 1px;
-  line-height: 120%;
+  line-height: 30px;
+  /* border: 1px solid white; */
 }
 .descriptionWrapper {
-  width: 700px;
+  width: 65%;
   margin: 40px 0 0;
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 80%;
+    height: 100%;
+    margin: 0 0 100px;
+    /* border: 1px solid white; */
+  }
+  .descriptionWrapper {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hello {
+    font-size: 1.2rem;
+  }
+  .name {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+  .developer {
+    font-size: 1.3rem;
+    color: var(--font-header-green);
+  }
+  .container {
+    width: 80%;
+    /* border: 1px solid white; */
+  }
   .description {
-    width: 500px;
+    font-size: 1rem;
   }
 }

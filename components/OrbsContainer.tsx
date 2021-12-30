@@ -7,8 +7,11 @@ interface NewOrb {
   id: string;
   isFading: boolean;
 }
+interface OrbsContainerProps {
+  isMobile: boolean;
+}
 
-function OrbsContainer() {
+function OrbsContainer({ isMobile }: OrbsContainerProps) {
   const [scroll, setScroll] = useState<number>(0);
   const [orbs, setOrbs] = useState<Array<NewOrb>>([]);
   const [userOrbs, setUserOrbs] = useState<Array<NewOrb>>([]);
@@ -117,12 +120,14 @@ function OrbsContainer() {
           scroll={scroll}
         />
       ))}
-      <LinkFooterBubble
-        handleAddOrbClick={handleAddOrbClick}
-        handleClearOrbClick={handleClearOrbClick}
-        handleStartClick={handleStartClick}
-        handleStopClick={handleStopClick}
-      />
+      {!isMobile && (
+        <LinkFooterBubble
+          handleAddOrbClick={handleAddOrbClick}
+          handleClearOrbClick={handleClearOrbClick}
+          handleStartClick={handleStartClick}
+          handleStopClick={handleStopClick}
+        />
+      )}
     </div>
   );
 }

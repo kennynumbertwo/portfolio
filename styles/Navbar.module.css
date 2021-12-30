@@ -49,7 +49,7 @@
   padding-right: 15px;
   height: 75px;
   z-index: 2;
-  background-color: var(--background-primary);
+  background-color: transparent;
 }
 
 .hamburger {
@@ -103,13 +103,13 @@
   transform: rotate(225deg);
 }
 
-@media only screen and (max-width: 850px) {
+@media all and (max-width: 850px) {
   .linksWrapper {
     width: 70%;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media all and (max-width: 576px) {
   .container {
     padding-bottom: 10px;
     width: 100vw;

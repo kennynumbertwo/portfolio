@@ -22,4 +22,10 @@
   }
 }
 @media (max-width: 576px) {
+  .skillsWrapper {
+    font-size: 0.7rem;
+  }
+  .container {
+    justify-content: center;
+  }
 }
