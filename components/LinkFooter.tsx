@@ -18,25 +18,25 @@ function LinkFooter() {
         <Link href={'https://github.com/kennynumbertwo'}>
           <a target="_blank">
             <span className={styles.iconGithub}>
-              <GithubIcon />
+              <GithubIcon size={24} />
             </span>
           </a>
         </Link>
         <button onClick={() => handleCopyClick('kennynumbertwo#8561')}>
           <span className={styles.iconDiscord}>
-            <DiscordIcon />
+            <DiscordIcon size={27} />
           </span>
         </button>
         <Link href={'https://www.linkedin.com/in/kenny-tye-3559106b/'}>
           <a target="_blank">
             <span className={styles.iconLinkedIn}>
-              <LinkedInIcon />
+              <LinkedInIcon size={24} />
             </span>
           </a>
         </Link>
         <button onClick={() => handleCopyClick('kennytye.dev@gmail.com')}>
           <span className={styles.iconMail}>
-            <MailIcon />
+            <MailIcon size={24} />
           </span>
         </button>
         <div className={styles.verticalLine} />

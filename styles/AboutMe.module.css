@@ -76,7 +76,9 @@
   }
   .rightSection {
     width: 100%;
-    /* border: 1px solid blue; */
+    height: 100%;
+    margin: 10px 0px 25px;
+    padding: 0px 2px;
   }
   .text {
     padding: 0;

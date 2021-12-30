@@ -1,6 +1,6 @@
 .contactButton {
   border: 1px solid rgba(245, 245, 245, 0.7);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(2, 12, 27, 0.3);
   color: rgba(245, 245, 245, 1);
   height: 45px;
   width: 150px;
@@ -20,5 +20,9 @@
     height: 40px;
     width: 125px;
     font-size: 0.75rem;
+  }
+  .contactButton:hover {
+    border: 1px solid rgba(245, 245, 245, 0.7);
+    color: rgba(245, 245, 245, 1);
   }
 }

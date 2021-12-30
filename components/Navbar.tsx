@@ -56,7 +56,13 @@ function Navbar({
             }`}
           >
             <div className={styles.resumeWrapper}>
-              <a className={styles.resumeText}>{navItemLeft}</a>
+              <a
+                className={styles.resumeText}
+                href="https://drive.google.com/file/d/1M_avscxxsuzQdMS68a7HTtc89z29491G/view?usp=sharing"
+                target="_blank"
+              >
+                {navItemLeft}
+              </a>
             </div>
             <div className={styles.linksWrapper}>
               <a
@@ -65,8 +71,18 @@ function Navbar({
               >
                 {navItemsRight.itemOne}
               </a>
-              <a className={styles.navItem}>{navItemsRight.itemTwo}</a>
-              <a className={styles.navItem}>{navItemsRight.itemThree}</a>
+              <a
+                className={styles.navItem}
+                onClick={() => executeScroll('projects')}
+              >
+                {navItemsRight.itemTwo}
+              </a>
+              <a
+                className={styles.navItem}
+                onClick={() => executeScroll('contact')}
+              >
+                {navItemsRight.itemThree}
+              </a>
             </div>
           </nav>
         )}

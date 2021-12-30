@@ -18,8 +18,16 @@
 }
 .wrapper:hover svg {
   cursor: default;
-  transform: translateX(2px);
+  transform: translateX(1.5px);
 }
 .text {
   font-weight: 100;
+}
+@media only screen and (max-width: 576px) {
+  .wrapper:hover {
+    color: inherit;
+  }
+  .wrapper:hover svg {
+    transform: none;
+  }
 }

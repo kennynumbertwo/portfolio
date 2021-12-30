@@ -1,11 +1,14 @@
-function DiscordIcon() {
+interface IconProps {
+  size: number;
+}
+function DiscordIcon({ size }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       role="img"
-      width="27"
-      height="27"
+      width={size}
+      height={size}
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 32 32"
       className="discordIcon"

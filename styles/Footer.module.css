@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 150px;
-  margin: auto 0px 30px;
+  height: 75px;
+  margin: auto 0px 0px;
 }
 .iconsWrapper {
   display: flex;
@@ -17,22 +17,37 @@
   margin: 0px 15px;
   transition: all 250ms ease-in-out;
 }
-.iconGithub svg:hover {
-  stroke: var(--font-header-green);
-}
-.iconDiscord svg:hover {
-  fill: var(--font-header-green);
-}
-.iconLinkedIn svg:hover {
-  stroke: var(--font-header-green);
-}
-.iconMail svg:hover {
-  stroke: var(--font-header-green);
-}
-.iconsWrapper svg:hover {
-  transform: translateY(-3px);
-  cursor: pointer;
-}
 .text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
+@media only screen and (max-width: 576px) {
+  .iconsWrapper svg {
+    height: 20;
+    width: 20;
+  }
+  .container {
+    height: 100px;
+    margin: auto 0px 20px;
+  }
+  .text {
+    font-size: 0.65rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .iconGithub svg:hover {
+    stroke: var(--font-header-green);
+  }
+  .iconDiscord svg:hover {
+    fill: var(--font-header-green);
+  }
+  .iconLinkedIn svg:hover {
+    stroke: var(--font-header-green);
+  }
+  .iconMail svg:hover {
+    stroke: var(--font-header-green);
+  }
+  .iconsWrapper svg:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
+} ;

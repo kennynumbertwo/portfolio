@@ -7,7 +7,10 @@ import LinkedInIcon from './icons/LinkedIn';
 import MailIcon from './icons/Mail';
 import copy from 'copy-to-clipboard';
 
-function Footer({ isMobile }) {
+interface FooterProps {
+  isMobile: boolean;
+}
+function Footer({ isMobile }: FooterProps) {
   const handleCopyClick = (link: string) => {
     copy(link);
   };
@@ -19,25 +22,25 @@ function Footer({ isMobile }) {
           <Link href={'https://github.com/kennynumbertwo'}>
             <a target="_blank">
               <span className={styles.iconGithub}>
-                <GithubIcon />
+                <GithubIcon size={isMobile ? 20 : 24} />
               </span>
             </a>
           </Link>
           <button onClick={() => handleCopyClick('kennynumbertwo#8561')}>
             <span className={styles.iconDiscord}>
-              <DiscordIcon />
+              <DiscordIcon size={isMobile ? 22 : 27} />
             </span>
           </button>
           <Link href={'https://www.linkedin.com/in/kenny-tye-3559106b/'}>
             <a target="_blank">
               <span className={styles.iconLinkedIn}>
-                <LinkedInIcon />
+                <LinkedInIcon size={isMobile ? 20 : 24} />
               </span>
             </a>
           </Link>
           <button onClick={() => handleCopyClick('kennytye.dev@gmail.com')}>
             <span className={styles.iconMail}>
-              <MailIcon />
+              <MailIcon size={isMobile ? 20 : 24} />
             </span>
           </button>
         </div>

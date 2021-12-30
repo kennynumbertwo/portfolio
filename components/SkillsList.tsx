@@ -2,7 +2,7 @@ import Skill from '../components/Skill';
 import styles from '../styles/SkillsList.module.css';
 
 const skills: string[] = [
-  'JavaScript (ES6+)',
+  'JavaScript',
   'React',
   'Next JS',
   'HTML',
