@@ -120,11 +120,19 @@ function Orb({ id, isFading, isUser, scroll, isMobile }: OrbProps) {
   };
 
   const getSize = () => {
-    let size = Math.floor(Math.random() * 500);
-    if (size < 200) {
-      size = size + 300;
+    if (isMobile) {
+      let size = Math.floor(Math.random() * 250);
+      if (size < 50) {
+        size = size + 50;
+      }
+      return size;
+    } else {
+      let size = Math.floor(Math.random() * 500);
+      if (size < 200) {
+        size = size + 300;
+      }
+      return size;
     }
-    return size;
   };
 
   const getColor = () => {

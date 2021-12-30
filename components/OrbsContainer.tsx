@@ -110,6 +110,7 @@ function OrbsContainer({ isMobile }: OrbsContainerProps) {
           isFading={orb.isFading}
           isUser={false}
           scroll={scroll}
+          isMobile={isMobile}
         />
       ))}
       {userOrbs.map((orb) => (
