@@ -6,6 +6,8 @@
 .introduction {
   width: 65%;
   height: 650px;
+  display: flex;
+  flex-direction: column;
 }
 .hello {
   font-size: 1.5rem;
