@@ -50,6 +50,12 @@
     "react/prop-types": 0,
     "react/no-unused-state": 0,
     "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }],
-    "quote-props": 0
+    "quote-props": 0,
+    //updated on deploy
+    "react/function-component-definition": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "consistent-return": 0,
+    "react/jsx-boolean-value": 0
   }
 }

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
