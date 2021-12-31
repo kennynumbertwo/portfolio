@@ -2,7 +2,7 @@ import styles from '../styles/Introduction.module.css';
 
 function Introduction() {
   return (
-    <section className={styles.container}>
+    <section className={styles.containerIntro}>
       <h4 className={styles.hello}>Hello, I'm</h4>
       <h1 className={styles.name}>Kenny Tye</h1>
       <h2 className={styles.developer}>I'm a web developer.</h2>
