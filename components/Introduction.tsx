@@ -1,4 +1,3 @@
-import classes from '../styles/Introduction.module.css';
 import styles from '../styles/Introduction.module.css';
 
 function Introduction() {

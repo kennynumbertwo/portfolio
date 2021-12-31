@@ -56,6 +56,10 @@
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "consistent-return": 0,
-    "react/jsx-boolean-value": 0
+    "react/jsx-boolean-value": 0,
+    "import/order": 0,
+    "react/jsx-no-target-blank": 0,
+    "react/button-has-type": 0,
+    "camelcase": 0;
   }
 }

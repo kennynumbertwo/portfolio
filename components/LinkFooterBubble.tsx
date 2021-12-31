@@ -41,6 +41,7 @@ function LinkFooterBubble({
         {isShowingControls ? (
           <div className={styles.controller}>
             <button
+              type="button"
               onClick={handleAddOrbClick}
               style={{ animation: `${animation}` }}
             >
@@ -49,6 +50,7 @@ function LinkFooterBubble({
               </span>
             </button>
             <button
+              type="button"
               onClick={handleClearOrbClick}
               style={{ animation: `${animation}` }}
             >
@@ -57,6 +59,7 @@ function LinkFooterBubble({
               </span>
             </button>
             <button
+              type="button"
               onClick={handleStartClick}
               style={{ animation: `${animation}` }}
             >
@@ -65,6 +68,7 @@ function LinkFooterBubble({
               </span>
             </button>
             <button
+              type="button"
               onClick={handleStopClick}
               style={{ animation: `${animation}` }}
             >
@@ -73,6 +77,7 @@ function LinkFooterBubble({
               </span>
             </button>
             <button
+              type="button"
               onClick={handleHideControls}
               style={{ animation: `${animation}` }}
             >
@@ -82,13 +87,11 @@ function LinkFooterBubble({
             </button>
           </div>
         ) : (
-          <>
-            <button onClick={handleShowControls}>
-              <span className={styles.iconQuestion}>
-                <QuestionMarkIcon />
-              </span>
-            </button>
-          </>
+          <button onClick={handleShowControls} type="button">
+            <span className={styles.iconQuestion}>
+              <QuestionMarkIcon />
+            </span>
+          </button>
         )}
         <div className={styles.verticalLine} />
       </div>

@@ -1,4 +1,5 @@
 import styles from '../styles/Footer.module.css';
+
 interface FooterProps {
   animateFooter: boolean;
 }

@@ -48,7 +48,10 @@ function LinkFooterMobile(): JSX.Element {
               </span>
             </a>
           </Link>
-          <button onClick={() => handleCopyDiscordClick('kennynumbertwo#8561')}>
+          <button
+            onClick={() => handleCopyDiscordClick('kennynumbertwo#8561')}
+            type="button"
+          >
             {isShowingClipDiscord ? (
               <span className={styles.iconClip}>
                 <ClipboardIcon size={27} />
@@ -66,7 +69,10 @@ function LinkFooterMobile(): JSX.Element {
               </span>
             </a>
           </Link>
-          <button onClick={() => handleCopyMailClick('kennytye.dev@gmail.com')}>
+          <button
+            onClick={() => handleCopyMailClick('kennytye.dev@gmail.com')}
+            type="button"
+          >
             {isShowingClipMail ? (
               <span className={styles.iconClip}>
                 <ClipboardIcon size={24} />
@@ -77,7 +83,7 @@ function LinkFooterMobile(): JSX.Element {
               </span>
             )}
           </button>
-          <button onClick={handleCloseClick}>
+          <button onClick={handleCloseClick} type="button">
             <span className={styles.iconMail}>
               <MinusIcon size={24} />
             </span>
@@ -89,7 +95,7 @@ function LinkFooterMobile(): JSX.Element {
   return (
     <div className={styles.iconsWrapperOuterMobile} id="footer">
       <div className={styles.iconsWrapperInnerMobile}>
-        <button onClick={handleOpenClick}>
+        <button onClick={handleOpenClick} type="button">
           <span className={styles.iconMail}>
             <LinkIcon size={24} />
           </span>

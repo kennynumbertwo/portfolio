@@ -30,14 +30,17 @@ function LinkFooter() {
   return (
     <div className={styles.iconsWrapperOuter} id="footer">
       <div className={styles.iconsWrapperInner}>
-        <Link href={'https://github.com/kennynumbertwo'}>
+        <Link href="https://github.com/kennynumbertwo">
           <a target="_blank">
             <span className={styles.iconGithub}>
               <GithubIcon size={24} />
             </span>
           </a>
         </Link>
-        <button onClick={() => handleCopyDiscordClick('kennynumbertwo#8561')}>
+        <button
+          onClick={() => handleCopyDiscordClick('kennynumbertwo#8561')}
+          type="button"
+        >
           {isShowingClipDiscord ? (
             <span className={styles.iconClip}>
               <ClipboardIcon size={27} />
@@ -48,14 +51,17 @@ function LinkFooter() {
             </span>
           )}
         </button>
-        <Link href={'https://www.linkedin.com/in/kenny-tye-3559106b/'}>
+        <Link href="https://www.linkedin.com/in/kenny-tye-3559106b/">
           <a target="_blank">
             <span className={styles.iconLinkedIn}>
               <LinkedInIcon size={24} />
             </span>
           </a>
         </Link>
-        <button onClick={() => handleCopyMailClick('kennytye.dev@gmail.com')}>
+        <button
+          onClick={() => handleCopyMailClick('kennytye.dev@gmail.com')}
+          type="button"
+        >
           {isShowingClipMail ? (
             <span className={styles.iconClip}>
               <ClipboardIcon size={24} />
