@@ -3,7 +3,12 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:@next/next/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -64,7 +69,6 @@
     "react/no-unescaped-entities": 0,
     "react/self-closing-comp": 0,
     "no-else-return": 0,
-    "react/no-unknown-property": 0,
-    "react/self-closing-comp": 0
+    "react/no-unknown-property": 0
   }
 }
