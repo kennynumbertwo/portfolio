@@ -3,11 +3,11 @@ import styles from '../styles/Introduction.module.css';
 function Introduction() {
   return (
     <section className={styles.container}>
-      <h4 className={classes.hello}>Hello, I'm</h4>
-      <h1 className={classes.name}>Kenny Tye</h1>
-      <h2 className={classes.developer}>I'm a web developer.</h2>
-      <div className={classes.descriptionWrapper}>
-        <p className={classes.description}>
+      <h4 className={styles.hello}>Hello, I'm</h4>
+      <h1 className={styles.name}>Kenny Tye</h1>
+      <h2 className={styles.developer}>I'm a web developer.</h2>
+      <div className={styles.descriptionWrapper}>
+        <p className={styles.description}>
           I’m a developer specializing in building React applications. I’m a
           natural tinkerer and love expanding my knowledge about coding and
           technology. I hope to join a team of talented individuals that I can
