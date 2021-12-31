@@ -74,7 +74,7 @@ function LinkFooterBubble({
               style={{ animation: `${animation}` }}
             >
               <span className={styles.iconMinus}>
-                <MinusIcon />
+                <MinusIcon size={24} />
               </span>
             </button>
           </div>
