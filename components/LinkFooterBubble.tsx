@@ -7,12 +7,18 @@ import PlayIcon from './icons/Play';
 import QuestionMarkIcon from './icons/QuestionMark';
 import TrashIcon from './icons/Trash';
 
+interface LinkFooterBubble {
+  handleAddOrbClick(): any;
+  handleClearOrbClick(): any;
+  handleStartClick(): any;
+  handleStopClick(): any;
+}
 function LinkFooterBubble({
   handleAddOrbClick,
   handleClearOrbClick,
   handleStartClick,
   handleStopClick,
-}) {
+}: LinkFooterBubble) {
   const [isShowingControls, setIsShowingContols] = useState<boolean>(false);
   const [animation, setAnimation] = useState<string>('');
 
@@ -69,7 +75,7 @@ function LinkFooterBubble({
               style={{ animation: `${animation}` }}
             >
               <span className={styles.iconMinus}>
-                <MinusIcon />
+                <MinusIcon size={24} />
               </span>
             </button>
           </div>
