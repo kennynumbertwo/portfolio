@@ -1,3 +1,8 @@
+.introductionWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .introduction {
   width: 65%;
   height: 650px;
