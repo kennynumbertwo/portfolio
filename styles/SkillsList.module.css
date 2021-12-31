@@ -13,7 +13,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  /* border: 1px solid white; */
 }
 
 @media (max-width: 1550px) {

@@ -15,7 +15,7 @@ const projects = {
   flashcard: {
     headerText: 'Flashcard Application',
     description:
-      'This is a full featured flashcard application I built with React and Firebase Firestore. The application allows individual users to create, edit and delete decks within their personal collection. The user can also track their knowledge through the mastery rating tracked on each run through the deck. On top of that, there are a large number of stock decks a user can choose from and add to their collection. I wrote Python web scrapers to collect and catalog all of the stock decks in the collection.',
+      'This is a full featured flashcard application I built with React and Firebase Firestore. The application allows individual users to create, edit and delete decks within their personal collection. The user can also track their knowledge through the mastery rating tracked on each run through a specific deck. On top of that, there are a large number of stock decks a user can choose from and add to their collection. I wrote Python web scrapers to collect and catalog all of the stock decks in the application.',
     skills: [
       'React',
       'JavaScript',
@@ -37,7 +37,7 @@ const projects = {
   portfolio: {
     headerText: 'Web Development Portfolio',
     description:
-      'I built this website with React, Next JS and Typescript. I started out designing the UI and components with Figma before moving into VS Code. I was set on designing every component and all CSS myself, without the help of any external  libraries. The floating orbs in the background were meant to be static in my initial design. Once I started writing the code, I thought it would be fun for the user to realize they can interact with the background.',
+      'I built this website with React, Next JS and Typescript. I started out designing the UI and components with Figma before moving into VS Code. I was set on designing every component and all CSS myself, without the help of any external  libraries. The floating orbs in the background were meant to be static in my initial design. Once I started writing the code, I thought it would be fun for the user to realize they can interact with the background through the user interface.',
     skills: [
       'React',
       'TypeScript',
@@ -58,7 +58,7 @@ const projects = {
   peermusic: {
     headerText: 'Peermusic Neighbouring Rights',
     description:
-      'I built this site for Peermusic after they completed their deal with three of the largest neighboring rights companies in the world. I built the bulk of this site with HTML, CSS and a touch of JavaScript. I used Bootstrap as the styling library for the website.',
+      'I built this site for Peermusic after they completed their deal with three of the largest neighboring rights companies in the world. I built the bulk of this site with HTML, CSS and a touch of JavaScript. I used Bootstrap as the styling library.',
     skills: ['Bootstrap', 'HTML', 'CSS', 'JavaScript', 'AOS Library'],
     images: [pm_1, pm_2],
     links: {

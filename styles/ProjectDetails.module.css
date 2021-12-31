@@ -180,7 +180,9 @@
   }
   .skillsContainer {
     width: 90%;
-    height: 100px;
+    height: 70px;
+    max-height: 70px;
+    margin: auto auto 5px 20px;
   }
   .descriptionContainer {
     width: 85%;
@@ -188,7 +190,7 @@
   .descriptionContainer p {
     font-size: 0.8rem;
     font-weight: 300;
-    line-height: 1.2rem;
+    line-height: 1.15rem;
     /* margin: 30px 0px 0px 0px; */
   }
 }

@@ -10,9 +10,9 @@ function Introduction() {
       <div className={classes.descriptionWrapper}>
         <p className={classes.description}>
           I’m a developer specializing in building React applications. I’m a
-          natural tinkerer and truly enjoy expanding my knowledge on all things
-          coding and technology. I hope to join a team of talented individuals
-          that I can learn from and build interesting projects with.
+          natural tinkerer and love expanding my knowledge about coding and
+          technology. I hope to join a team of talented individuals that I can
+          learn from and build interesting projects with.
         </p>
       </div>
     </section>
