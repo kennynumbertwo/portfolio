@@ -11,6 +11,7 @@ import Contact from '../components/Contact';
 import Projects from '../components/Projects';
 import OrbsContainer from '../components/OrbsContainer';
 import LinkFooterMobile from '../components/LinkFooterMobile';
+import Intro from '../components/Intro';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -145,6 +146,7 @@ const Home: NextPage = () => {
         executeScroll={executeScroll}
       />
       <Introduction />
+      <Intro />
       <div ref={aboutRef} />
       <AboutMe animateAbout={animateAbout} />
       <div ref={projectsRef} />
