@@ -145,7 +145,6 @@ const Home: NextPage = () => {
         isMobile={isMobile}
         executeScroll={executeScroll}
       />
-      <Introduction />
       <Intro />
       <div ref={aboutRef} />
       <AboutMe animateAbout={animateAbout} />
