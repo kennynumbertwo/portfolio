@@ -38,13 +38,13 @@ function AboutMe({ animateAbout }: AboutProps): JSX.Element {
               been doing by hand for the prior decade, and increased my own
               productivity by a wide margin. I also wrote scripts to enhance the
               research I was doing on songwriters who were just bubbling up on
-              the Billboard Hot 100 charts. It gave me the edge againt my
+              the Billboard Hot 100 charts. It gave me the edge against my
               competitors and put us at the table for negotiating publishing
               deals early. {'\n'} {'\n'}
               I’ve since become completely enamored with learning as much as I
-              can about coding, web developement, data science and automation.
-              It’s been an incredible journey and I’ve since created
-              applications with the following technologies.
+              can about coding, web development, data science and automation.
+              It’s been an incredible journey and I’ve created applications with
+              the following technologies:
             </p>
           </div>
           <div className={styles.skillsListWrapper}>

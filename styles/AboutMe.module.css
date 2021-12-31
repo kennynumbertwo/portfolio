@@ -4,13 +4,17 @@
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 650px;
-  transition: all 1200ms;
+  transition-property: opacity, transform;
+  transition-duration: 1200ms;
+  transition-timing-function: ease-in-out;
 }
 .header {
   font-size: 2rem;
   margin: 0 0 30px;
   width: 65%;
-  transition: all 1000ms;
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
 }
 .textWrapper {
   display: flex;

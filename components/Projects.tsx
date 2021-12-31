@@ -58,7 +58,7 @@ const projects = {
   peermusic: {
     headerText: 'Peermusic Neighbouring Rights',
     description:
-      'I built this site for Peermusic after they completed their deal with three of the largest neighboring rights companies in the world. I built the bulk of this site with HTML, CSS and a touch of JavaScript. I used Bootstrap as the styling library.',
+      'I built this site for Peermusic after they completed their deal with three of the largest neighbouring rights companies in the world. I built the bulk of this site with HTML, CSS and a touch of JavaScript. I used Bootstrap as the styling library.',
     skills: ['Bootstrap', 'HTML', 'CSS', 'JavaScript', 'AOS Library'],
     images: [pm_1, pm_2],
     links: {
@@ -71,7 +71,7 @@ const projects = {
   destroybox: {
     headerText: 'Destroy Box Audio',
     description:
-      'I am also a professional audio/mix engineer and wanted to build a simple site to show off the projects I’ve worked on over the years. This was my first attempt at a React application and I built it with class based React components (I hadn’t learned hooks yet). It also allows a user to submit a form if they are interested in hiring me to work on their bands next project.',
+      'I am also a professional audio/mix engineer and wanted to build a simple site to show off the projects I’ve worked on over the years. This was my first attempt at a React application and I built it with class-based React components (I hadn’t learned hooks yet). It also allows a user to submit a form if they are interested in hiring me to work on their bands next project.',
     skills: ['JavaScript', 'HTML', 'CSS', 'React'],
     images: [destroybox_1, destroybox_2],
     links: {

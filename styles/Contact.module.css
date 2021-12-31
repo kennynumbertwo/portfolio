@@ -5,7 +5,9 @@
   align-items: center;
   height: 380px;
   margin: 30px 0 40px;
-  transition: all 1000ms;
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
 }
 .container p {
   display: flex;

@@ -34,17 +34,16 @@ const Home: NextPage = () => {
 
   const handleScroll = () => {
     setScroll(window.scrollY);
-    console.log(window.scrollY);
     if (window.scrollY > 100) {
       setAnimateAbout(true);
     }
     if (window.scrollY <= 100) {
       setAnimateAbout(false);
     }
-    if (window.scrollY > 1200 && !isMobile) {
+    if (window.scrollY > 1100 && !isMobile) {
       setAnimateProjects(true);
     }
-    if (window.scrollY <= 1200 && !isMobile) {
+    if (window.scrollY <= 1100 && !isMobile) {
       setAnimateProjects(false);
     }
     if (window.scrollY > 1800 && isMobile) {
@@ -59,22 +58,22 @@ const Home: NextPage = () => {
     if (window.scrollY <= 1750 && !isMobile) {
       setAnimateContact(false);
     }
-    if (window.scrollY > 2350 && isMobile) {
+    if (window.scrollY > 2500 && isMobile) {
       setAnimateContact(true);
     }
-    if (window.scrollY <= 2350 && isMobile) {
+    if (window.scrollY <= 2500 && isMobile) {
       setAnimateContact(false);
     }
-    if (window.scrollY > 2000 && !isMobile) {
+    if (window.scrollY > 1700 && !isMobile) {
       setAnimateFooter(true);
     }
-    if (window.scrollY <= 2000 && !isMobile) {
+    if (window.scrollY <= 1700 && !isMobile) {
       setAnimateFooter(false);
     }
-    if (window.scrollY > 2600 && isMobile) {
+    if (window.scrollY > 2500 && isMobile) {
       setAnimateFooter(true);
     }
-    if (window.scrollY <= 2600 && isMobile) {
+    if (window.scrollY <= 2500 && isMobile) {
       setAnimateFooter(false);
     }
   };

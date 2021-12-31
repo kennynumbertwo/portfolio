@@ -8,7 +8,6 @@ function Footer({ animateFooter }: FooterProps) {
       className={styles.container}
       style={{
         opacity: animateFooter ? 1 : 0,
-        transform: animateFooter ? 'translateY(0px)' : 'translateY(20px)',
       }}
     >
       <p className={styles.text}>Designed and built by Kenny Tye</p>
