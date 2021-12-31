@@ -1,13 +1,13 @@
 .containerIntro {
   width: 65%;
   height: 650px;
-  border: 1px solid red;
 }
 .hello {
   font-size: 1.5rem;
   font-weight: 100;
   margin: 50px 0 30px;
   animation: textInTop ease-in-out 500ms;
+  border: 2px solid red;
 }
 @keyframes textInTop {
   0% {
