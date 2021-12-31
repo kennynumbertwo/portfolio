@@ -6,13 +6,18 @@ import PauseIcon from './icons/Pause';
 import PlayIcon from './icons/Play';
 import QuestionMarkIcon from './icons/QuestionMark';
 import TrashIcon from './icons/Trash';
-
+interface LinkFooterBubbleMobileProps {
+  handleAddOrbClick(): any;
+  handleClearOrbClick(): any;
+  handleStartClick(): any;
+  handleStopClick(): any;
+}
 function LinkFooterBubble({
   handleAddOrbClick,
   handleClearOrbClick,
   handleStartClick,
   handleStopClick,
-}) {
+}: LinkFooterBubbleMobileProps) {
   const [isShowingControls, setIsShowingContols] = useState<boolean>(false);
   const [animation, setAnimation] = useState<string>('');
 
