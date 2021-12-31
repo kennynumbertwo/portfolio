@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 75px;
   margin: auto 0px 0px;
+  transition: all 1000ms;
 }
 .iconsWrapper {
   display: flex;

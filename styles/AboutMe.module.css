@@ -4,11 +4,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 650px;
+  transition: all 1200ms;
 }
 .header {
   font-size: 2rem;
   margin: 0 0 30px;
   width: 65%;
+  transition: all 1000ms;
 }
 .textWrapper {
   display: flex;
@@ -53,7 +55,6 @@
   .container {
     flex-direction: column-reverse;
     width: 80%;
-    /* border: 1px solid blue; */
     height: 100%;
     margin: 0 0 50px;
   }

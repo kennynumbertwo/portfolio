@@ -3,13 +3,30 @@ import Image from 'next/image';
 import headshot from '../public/headshot_sized.jpg';
 import SkillsList from '../components/SkillsList';
 
-function AboutMe(): JSX.Element {
+interface AboutProps {
+  animateAbout: boolean;
+}
+
+function AboutMe({ animateAbout }: AboutProps): JSX.Element {
   return (
     <>
-      <h2 className={styles.header} id="aboutMe">
+      <h2
+        className={styles.header}
+        id="aboutMe"
+        style={{
+          opacity: animateAbout ? 1 : 0,
+          transform: animateAbout ? 'translateY(0px)' : 'translateY(20px)',
+        }}
+      >
         About Me
       </h2>
-      <section className={styles.container}>
+      <section
+        className={styles.container}
+        style={{
+          opacity: animateAbout ? 1 : 0,
+          transform: animateAbout ? 'translateY(0px)' : 'translateY(20px)',
+        }}
+      >
         <div className={styles.leftSection}>
           <div className={styles.textWrapper}>
             <p className={styles.text}>

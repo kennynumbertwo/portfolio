@@ -84,9 +84,10 @@ const projects = {
 };
 interface ProjectsProps {
   isMobile: boolean;
+  animateProjects: boolean;
 }
 
-function Projects({ isMobile }: ProjectsProps): JSX.Element {
+function Projects({ isMobile, animateProjects }: ProjectsProps): JSX.Element {
   const [selected, setSelected] = useState<string>('flashcard');
 
   const getStyle = (id: string) => {
@@ -100,10 +101,23 @@ function Projects({ isMobile }: ProjectsProps): JSX.Element {
 
   return (
     <>
-      <h2 className={styles.header} id="aboutMe">
+      <h2
+        className={styles.header}
+        style={{
+          opacity: animateProjects ? 1 : 0,
+          transform: animateProjects ? 'translateY(0px)' : 'translateY(20px)',
+        }}
+        id="projects"
+      >
         Projects
       </h2>
-      <section className={styles.wrapper}>
+      <section
+        className={styles.wrapper}
+        style={{
+          opacity: animateProjects ? 1 : 0,
+          transform: animateProjects ? 'translateY(0px)' : 'translateY(20px)',
+        }}
+      >
         <div className={styles.containerMain}>
           <div className={styles.containerProject}>
             <button

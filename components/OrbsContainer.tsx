@@ -11,25 +11,16 @@ interface NewOrb {
 interface OrbsContainerProps {
   isMobile: boolean;
   isMidsize: boolean;
+  scroll: number;
 }
 
-function OrbsContainer({ isMobile, isMidsize }: OrbsContainerProps) {
-  const [scroll, setScroll] = useState<number>(0);
+function OrbsContainer({ isMobile, isMidsize, scroll }: OrbsContainerProps) {
   const [orbs, setOrbs] = useState<Array<NewOrb>>([]);
   const [userOrbs, setUserOrbs] = useState<Array<NewOrb>>([]);
   const [orbCount, setOrbCount] = useState<number>(1);
   const [orbCountUser, setOrbCountUser] = useState<number>(1);
   const [orbTimer, setOrbTimer] = useState<number>(2000);
   const [isRunning, setIsRunning] = useState<boolean>(true);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    setScroll(window.scrollY);
-  };
 
   // While isRunning, automatically creates orbs in the background
   useEffect(() => {

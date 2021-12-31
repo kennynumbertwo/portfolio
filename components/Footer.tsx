@@ -1,14 +1,16 @@
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
 import styles from '../styles/Footer.module.css';
-import DiscordIcon from './icons/Discord';
-import GithubIcon from './icons/Github';
-import LinkedInIcon from './icons/LinkedIn';
-import MailIcon from './icons/Mail';
-import copy from 'copy-to-clipboard';
-function Footer() {
+interface FooterProps {
+  animateFooter: boolean;
+}
+function Footer({ animateFooter }: FooterProps) {
   return (
-    <footer className={styles.container}>
+    <footer
+      className={styles.container}
+      style={{
+        opacity: animateFooter ? 1 : 0,
+        transform: animateFooter ? 'translateY(0px)' : 'translateY(20px)',
+      }}
+    >
       <p className={styles.text}>Designed and built by Kenny Tye</p>
     </footer>
   );
