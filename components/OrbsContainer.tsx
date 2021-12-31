@@ -45,7 +45,7 @@ function OrbsContainer({ isMobile, isMidsize, scroll }: OrbsContainerProps) {
   }, [orbCount, isRunning]);
 
   // Click handler for the add orb button. If over a certain length, will delete an orb when a new orb is created.
-  const handleAddOrbClick = () => {
+  const handleAddOrbClick = (): any => {
     if (userOrbs.length > 20) {
       let userOrbsCopy = [...userOrbs];
       let updatedUserOrbs = userOrbsCopy.slice(1);

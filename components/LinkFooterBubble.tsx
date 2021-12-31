@@ -6,12 +6,15 @@ import PauseIcon from './icons/Pause';
 import PlayIcon from './icons/Play';
 import QuestionMarkIcon from './icons/QuestionMark';
 import TrashIcon from './icons/Trash';
+
+//Interface
 interface LinkFooterBubbleMobileProps {
   handleAddOrbClick(): any;
   handleClearOrbClick(): any;
   handleStartClick(): any;
   handleStopClick(): any;
 }
+
 function LinkFooterBubble({
   handleAddOrbClick,
   handleClearOrbClick,
