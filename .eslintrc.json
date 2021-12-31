@@ -60,6 +60,6 @@
     "import/order": 0,
     "react/jsx-no-target-blank": 0,
     "react/button-has-type": 0,
-    "camelcase": 0;
+    "camelcase": 0
   }
 }
