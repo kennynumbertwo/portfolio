@@ -94,7 +94,7 @@
   margin: 40px 0 0;
 }
 @media only screen and (max-width: 1300px) {
-  .container {
+  .introduction {
     width: 80%;
     height: 100%;
     margin: 0 0 100px;
@@ -115,7 +115,7 @@
     font-size: 1.3rem;
     color: var(--font-header-green);
   }
-  .container {
+  .introduction {
     width: 80%;
   }
   .description {

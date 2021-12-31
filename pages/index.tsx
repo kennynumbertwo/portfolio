@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
-import Introduction from '../components/Introduction';
 import LinkFooter from '../components/LinkFooter';
 import AboutMe from '../components/AboutMe';
 import Navbar from '../components/Navbar';
