@@ -1,6 +1,7 @@
 .containerIntro {
   width: 65%;
   height: 650px;
+  border: 1px solid red;
 }
 .hello {
   font-size: 1.5rem;
