@@ -41,7 +41,7 @@ function LinkFooterMobile(): JSX.Element {
     return (
       <div className={styles.iconsWrapperOuter} id="footer">
         <div className={styles.iconsWrapperInner}>
-          <Link href={'https://github.com/kennynumbertwo'}>
+          <Link href="https://github.com/kennynumbertwo">
             <a target="_blank">
               <span className={styles.iconGithub}>
                 <GithubIcon size={24} />
@@ -62,7 +62,7 @@ function LinkFooterMobile(): JSX.Element {
               </span>
             )}
           </button>
-          <Link href={'https://www.linkedin.com/in/kenny-tye-3559106b/'}>
+          <Link href="https://www.linkedin.com/in/kenny-tye-3559106b/">
             <a target="_blank">
               <span className={styles.iconLinkedIn}>
                 <LinkedInIcon size={24} />

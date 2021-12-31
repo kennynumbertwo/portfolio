@@ -7,7 +7,6 @@ import PlayIcon from './icons/Play';
 import QuestionMarkIcon from './icons/QuestionMark';
 import TrashIcon from './icons/Trash';
 
-//Interface
 interface LinkFooterBubbleMobileProps {
   handleAddOrbClick(): any;
   handleClearOrbClick(): any;

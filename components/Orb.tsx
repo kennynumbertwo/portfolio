@@ -129,7 +129,7 @@ function Orb({ id, isFading, isUser, scroll, isMobile }: OrbProps) {
     } else {
       let size = Math.floor(Math.random() * 500);
       if (size < 200) {
-        size = size + 300;
+        size += 300;
       }
       return size;
     }

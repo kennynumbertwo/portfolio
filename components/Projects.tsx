@@ -1,4 +1,3 @@
-import classes from '../styles/Projects.module.css';
 import { useState } from 'react';
 import styles from '../styles/Projects.module.css';
 import ProjectDetails from './ProjectDetails';

@@ -101,15 +101,13 @@ function ProjectDetails({
         </div>
       </div>
       <div className={styles.skillsContainer}>
-        {skills.map((skill, index) => {
-          return (
-            <ProjectSkill
-              key={`${selected}-${skill}`}
-              text={skill}
-              delay={index}
-            />
-          );
-        })}
+        {skills.map((skill, index) => (
+          <ProjectSkill
+            key={`${selected}-${skill}`}
+            text={skill}
+            delay={index}
+          />
+        ))}
       </div>
     </div>
   );
