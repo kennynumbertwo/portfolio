@@ -124,6 +124,7 @@ const Home: NextPage = () => {
     <div className={styles.main}>
       <Head>
         <title>Kenny Tye</title>
+        <link rel="icon" href="/favicon/ico" />
         <meta
           name="Kenny Tye's Web Developement Portfolio"
           content="Professional web development portfolio for Kenny Tye."
