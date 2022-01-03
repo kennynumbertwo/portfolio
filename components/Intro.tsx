@@ -9,10 +9,10 @@ function Intro(): JSX.Element {
         <h2 className={styles.developer}>I'm a web developer.</h2>
         <div className={styles.descriptionWrapper}>
           <p className={styles.description}>
-            I’m a developer specializing in building React applications. I’m a
-            natural tinkerer and love expanding my knowledge about coding and
-            technology. I hope to join a team of talented individuals that I can
-            learn from and build interesting projects with.
+            I’m a developer specializing in building React applications. I am
+            naturally curious, creative and I love to solve difficult problems.
+            I hope to join a team of talented individuals I can learn from and
+            build interesting projects with.
           </p>
         </div>
       </section>
