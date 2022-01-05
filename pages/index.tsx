@@ -80,7 +80,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (scrollPosition === 'about') {
-      window.scrollTo(0, aboutRef.current.offsetTop - 40);
+      window.scrollTo(0, aboutRef.current.offsetTop - 110);
       setScrollPosition('');
     }
     if (scrollPosition === 'projects') {

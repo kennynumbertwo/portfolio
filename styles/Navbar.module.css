@@ -62,7 +62,6 @@
   height: 75px;
   z-index: 2;
   background-color: transparent;
-  /* border: 1px solid red; */
 }
 
 .hamburger {
@@ -132,7 +131,6 @@
     height: 140px;
     overflow: hidden;
     z-index: 1;
-    /* border: 1px solid white; */
   }
   .container.showing {
     animation: 300ms ease-in-out navbarSlideIn;
@@ -142,25 +140,21 @@
   }
   @keyframes navbarSlideIn {
     0% {
-      /* transform: translateY(-100%); */
       height: 0px;
       opacity: 0;
     }
     100% {
-      /* transform: translateY(0); */
       height: 140px;
       opacity: 1;
     }
   }
   @keyframes navbarSlideOut {
     0% {
-      /* transform: translateY(0%); */
       height: 140px;
       opacity: 1;
     }
     100% {
       height: 0px;
-      /* transform: translateY(-100%); */
       opacity: 0;
     }
   }

@@ -152,7 +152,6 @@
   .border {
     height: 5px;
     width: 100%;
-    /* margin-top: auto; */
   }
   .projectTitle {
     margin: auto;
@@ -177,7 +176,6 @@
   .wrapper {
     height: 650px;
     max-height: 650px;
-    /* border: 1px solid red; */
     width: 90%;
   }
   .projectTitle {
