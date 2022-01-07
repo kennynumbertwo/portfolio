@@ -6,7 +6,7 @@ const skills: string[] = [
   'React',
   'Next JS',
   'HTML',
-  'CSS',
+  'CSS / Sass',
   'Python',
   'Beautiful Soup',
   'Git & Github',
