@@ -10,10 +10,10 @@ const skills: string[] = [
   'Python',
   'Beautiful Soup',
   'Git & Github',
-  'Firebase Firestore',
   'Figma',
   'Material UI',
-  'Bootstrap',
+  'SQL / MySQL',
+  'NoSQL / Firebase',
 ];
 
 function SkillsList() {
