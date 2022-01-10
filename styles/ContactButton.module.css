@@ -3,10 +3,10 @@
   background-color: rgba(2, 12, 27, 0.3);
   color: rgba(245, 245, 245, 1);
   height: 45px;
-  width: 150px;
+  width: 215px;
   border-radius: 5px;
   transition: 300ms;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-family: var(--font-header);
 }
 .contactButton:hover {
@@ -15,10 +15,35 @@
   cursor: pointer;
 }
 
+.copied {
+  animation: fadeIn 400ms ease-in-out;
+}
+
+.email {
+  animation: fadeInEmail 400ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInEmail {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .contactButton {
     height: 40px;
-    width: 125px;
+    width: 200px;
     font-size: 0.75rem;
   }
   .contactButton:hover {
