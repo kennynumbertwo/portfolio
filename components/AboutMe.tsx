@@ -30,7 +30,7 @@ function AboutMe({ animateAbout }: AboutProps): JSX.Element {
         <div className={styles.leftSection}>
           <div className={styles.textWrapper}>
             <p className={styles.text}>
-              I am a web developer and programmer from Los Angeles, CA. I
+              I am a full stack developer and programmer from Los Angeles, CA. I
               started coding with Python after developing an interest in
               automating some of the repetitive tasks I was responsible for
               while working as the A&R Manager at a music publisher. I built
