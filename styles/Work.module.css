@@ -1,0 +1,132 @@
+.wrapper {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: opacity, transform;
+  transition-duration: 1200ms;
+  transition-timing-function: ease-in-out;
+}
+.header {
+  font-size: 1.5rem;
+  height: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
+}
+
+.workWrapper {
+  width: 80%;
+}
+
+.workItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px 0;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.name {
+  min-width: 48%;
+  flex-grow: 1;
+  padding: 4px 0;
+}
+
+.nameLink {
+  min-width: 48%;
+  text-decoration: underline;
+  flex-grow: 1;
+  padding: 4px 0;
+}
+
+.year {
+  flex-grow: 1;
+  padding: 4px 0;
+}
+
+.yearInactive {
+  opacity: 0.5;
+  padding: 4px 0;
+}
+
+.client {
+  width: 40%;
+  display: flex;
+  padding: 4px 0;
+}
+
+@media (min-width: 900px) {
+  .header {
+    font-size: 2rem;
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition-property: opacity, transform;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: opacity, transform;
+    transition-duration: 1200ms;
+    transition-timing-function: ease-in-out;
+  }
+  .workItem {
+    display: flex;
+    width: 100%;
+    padding: 4px 0;
+    white-space: nowrap;
+    font-size: 1rem;
+    flex-direction: row;
+  }
+
+  .name {
+    width: 48%;
+    flex-grow: 0;
+  }
+
+  .nameLink {
+    width: 48%;
+    text-decoration: underline;
+    flex-grow: 0;
+  }
+
+  .year {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .yearInactive {
+    opacity: 0.5;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .client {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    width: 65%;
+  }
+  .wrapper {
+    width: 80%;
+  }
+}

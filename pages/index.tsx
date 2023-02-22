@@ -11,6 +11,7 @@ import Projects from '../components/Projects';
 import OrbsContainer from '../components/OrbsContainer';
 import LinkFooterMobile from '../components/LinkFooterMobile';
 import Intro from '../components/Intro';
+import Work from '../components/Work';
 
 const Home: NextPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,10 +41,10 @@ const Home: NextPage = () => {
     if (window.scrollY <= 100) {
       setAnimateAbout(false);
     }
-    if (window.scrollY > 1100 && !isMobile) {
+    if (window.scrollY > 900 && !isMobile) {
       setAnimateProjects(true);
     }
-    if (window.scrollY <= 1100 && !isMobile) {
+    if (window.scrollY <= 900 && !isMobile) {
       setAnimateProjects(false);
     }
     if (window.scrollY > 1800 && isMobile) {
@@ -52,10 +53,10 @@ const Home: NextPage = () => {
     if (window.scrollY <= 1800 && isMobile) {
       setAnimateProjects(false);
     }
-    if (window.scrollY > 1750 && !isMobile) {
+    if (window.scrollY > 1200 && !isMobile) {
       setAnimateContact(true);
     }
-    if (window.scrollY <= 1750 && !isMobile) {
+    if (window.scrollY <= 1200 && !isMobile) {
       setAnimateContact(false);
     }
     if (window.scrollY > 2500 && isMobile) {
@@ -149,7 +150,8 @@ const Home: NextPage = () => {
       <div ref={aboutRef} />
       <AboutMe animateAbout={animateAbout} />
       <div ref={projectsRef} />
-      <Projects animateProjects={animateProjects} isMobile={isMobile} />
+      {/* <Projects animateProjects={animateProjects} isMobile={isMobile} /> */}
+      <Work animateProjects={animateProjects} />
       <div ref={contactRef} />
       <Contact animateContact={animateContact} />
       {isMidsize || isMobile ? <LinkFooterMobile /> : <LinkFooter />}

@@ -3,28 +3,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .skillsWrapper {
-  height: 150px;
+  display: grid;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  font-size: 0.9rem;
+  line-height: 2rem;
 }
 
-@media (max-width: 1550px) {
+@media (min-width: 758px) {
   .skillsWrapper {
-    height: 220px;
-  }
-}
-@media (max-width: 576px) {
-  .skillsWrapper {
-    font-size: 0.75rem;
-  }
-  .container {
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 50px;
   }
 }

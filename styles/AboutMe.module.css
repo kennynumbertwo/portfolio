@@ -36,21 +36,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   min-width: 500px;
   margin-right: auto;
-}
-.rightSection {
-  padding: 0px 0 0;
-  width: 400px;
-  height: 500px;
-}
-.image {
-  opacity: 0.7;
-  transition: 300ms ease-in-out;
-}
-.image:hover {
-  opacity: 0.9;
 }
 .skillsListWrapper {
   width: 100%;
