@@ -18,10 +18,7 @@ function Contact({ animateContact }: ContactProps) {
         <h2 className={styles.header}>Contact</h2>
         <div className={styles.lineRight} />
       </div>
-      <p>
-        I am currently seeking new freelance and full-time developer
-        opportunities.
-      </p>
+      <p>I am currently open for select freelance opportunities.</p>
       <p>Need a developer for your next project?</p>
       <ContactButton />
     </section>
