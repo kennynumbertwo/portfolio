@@ -12,24 +12,25 @@ import portfolio_2 from '../public/projects/portfolio_2.png';
 
 const projects = {
   flashcard: {
-    headerText: 'Flashcard Application',
+    headerText: 'bf.inc',
     description:
       'This is a full featured flashcard application I built with React and Firebase Firestore. The application allows individual users to create, edit and delete decks within their personal collection. The user can also track their knowledge through the mastery rating tracked on each run through a specific deck. On top of that, there are a large number of stock decks a user can choose from and add to their collection. I wrote Python web scrapers to collect and catalog all of the stock decks in the application.',
     skills: [
       'React',
       'JavaScript',
-      'Firebase',
-      'MUI',
-      'JSS',
-      'React Router',
-      'Python',
-      'Beautiful Soup',
+      'Gatsby',
+      'Sanity',
+      'Sass',
+      'Tailwind',
+      'Framer Motion',
+      'Hubspot',
+      'Netlify',
     ],
     images: [flashcard_1, flashcard_2],
     links: {
-      github: 'https://github.com/kennynumbertwo/flashcard-app',
-      external: 'https://trusting-easley-bb7a76.netlify.app/',
-      isShowingGithub: true,
+      github: '',
+      external: 'https://bf.inc',
+      isShowingGithub: false,
       isShowingExternal: true,
     },
   },
@@ -80,6 +81,75 @@ const projects = {
       isShowingExternal: true,
     },
   },
+  // flashcard: {
+  //   headerText: 'Flashcard Application',
+  //   description:
+  //     'This is a full featured flashcard application I built with React and Firebase Firestore. The application allows individual users to create, edit and delete decks within their personal collection. The user can also track their knowledge through the mastery rating tracked on each run through a specific deck. On top of that, there are a large number of stock decks a user can choose from and add to their collection. I wrote Python web scrapers to collect and catalog all of the stock decks in the application.',
+  //   skills: [
+  //     'React',
+  //     'JavaScript',
+  //     'Firebase',
+  //     'MUI',
+  //     'JSS',
+  //     'React Router',
+  //     'Python',
+  //     'Beautiful Soup',
+  //   ],
+  //   images: [flashcard_1, flashcard_2],
+  //   links: {
+  //     github: 'https://github.com/kennynumbertwo/flashcard-app',
+  //     external: 'https://trusting-easley-bb7a76.netlify.app/',
+  //     isShowingGithub: true,
+  //     isShowingExternal: true,
+  //   },
+  // },
+  // portfolio: {
+  //   headerText: 'Web Development Portfolio',
+  //   description:
+  //     'I built this website with React, Next JS and Typescript. I started out designing the UI and components with Figma before moving into VS Code. I was set on designing every component and all CSS myself, without the help of any external  libraries. The floating orbs in the background were meant to be static in my initial design. Once I started writing the code, I thought it would be fun for the user to realize they can interact with the background through the user interface.',
+  //   skills: [
+  //     'React',
+  //     'TypeScript',
+  //     'Next JS',
+  //     'CSS Modules',
+  //     'HTML',
+  //     'CSS',
+  //     'Figma',
+  //   ],
+  //   images: [portfolio_1, portfolio_2],
+  //   links: {
+  //     github: 'https://github.com/kennynumbertwo/portfolio',
+  //     external: '',
+  //     isShowingGithub: true,
+  //     isShowingExternal: false,
+  //   },
+  // },
+  // peermusic: {
+  //   headerText: 'Peermusic Neighbouring Rights',
+  //   description:
+  //     'I built this site for Peermusic after they completed their deal with three of the largest neighbouring rights companies in the world. I built the bulk of this site with HTML, CSS and a touch of JavaScript. I used Bootstrap as the styling library.',
+  //   skills: ['Bootstrap', 'HTML', 'CSS', 'JavaScript', 'AOS Library'],
+  //   images: [pm_1, pm_2],
+  //   links: {
+  //     github: '',
+  //     external: 'https://nr.peermusic.com/',
+  //     isShowingGithub: false,
+  //     isShowingExternal: true,
+  //   },
+  // },
+  // destroybox: {
+  //   headerText: 'Destroy Box Audio',
+  //   description:
+  //     'I am also a professional audio/mix engineer and wanted to build a simple site to show off the projects I’ve worked on over the years. This was my first attempt at a React application and I built it with class-based React components (I hadn’t learned hooks yet). It also allows a user to submit a form if they are interested in hiring me to work on their bands next project.',
+  //   skills: ['JavaScript', 'HTML', 'CSS', 'React'],
+  //   images: [destroybox_1, destroybox_2],
+  //   links: {
+  //     github: 'https://github.com/kennynumbertwo/destroyboxaudio',
+  //     external: 'https://www.destroyboxaudio.com/',
+  //     isShowingGithub: true,
+  //     isShowingExternal: true,
+  //   },
+  // },
 };
 interface ProjectsProps {
   isMobile: boolean;
@@ -108,7 +178,7 @@ function Projects({ isMobile, animateProjects }: ProjectsProps): JSX.Element {
         }}
         id="projects"
       >
-        Projects
+        Professional Work
       </h2>
       <section
         className={styles.wrapper}
@@ -157,7 +227,7 @@ function Projects({ isMobile, animateProjects }: ProjectsProps): JSX.Element {
                 skills={projects.flashcard.skills}
                 imageOne={projects.flashcard.images[0]}
                 imageTwo={projects.flashcard.images[1]}
-                links={projects.flashcard.links}
+                links={projects.flashcard?.links}
                 isMobile={isMobile}
               />
             )}
