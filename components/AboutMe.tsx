@@ -35,7 +35,7 @@ function AboutMe({ animateAbout }: AboutProps): JSX.Element {
               and have been working professionally as frontend engineer since
               February, 2022. In the time since then, have worked closely
               several development teams on ecommerce stores, marketing websites
-              and core business web applications. I am currently on building
+              and core business web applications. I am currently building
               brand-focused ecommerce and marketing experiences with Bondfire
               Inc. and our partners as a fulltime software engineer.
             </p>

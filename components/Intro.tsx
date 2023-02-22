@@ -11,8 +11,8 @@ function Intro(): JSX.Element {
           <p className={styles.description}>
             I’m a developer specializing in building React applications. I am
             naturally curious, creative and I love to solve difficult problems.
-            I hope to join a team of talented individuals I can learn from and
-            build engaging digital experiences with.
+            I'm currently available for select freelance work. If you'd like to
+            connect, please get in touch.
           </p>
         </div>
       </section>
