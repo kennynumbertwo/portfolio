@@ -6,10 +6,22 @@ interface WorkProps {
 
 const workList = [
   {
-    name: "Buddy's Wine",
+    name: 'Minna',
     year: 'Coming Soon',
     client: 'Bondfire',
     link: '',
+  },
+  {
+    name: 'Nugget',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
+    name: "Buddy's Wine",
+    year: '2023',
+    client: 'Bondfire',
+    link: 'https://www.buddyswinebar.com/',
   },
   {
     name: "Frankie's 457",
