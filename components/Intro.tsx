@@ -9,7 +9,7 @@ function Intro(): JSX.Element {
         <h2 className={styles.developer}>I'm a full stack developer.</h2>
         <div className={styles.descriptionWrapper}>
           <p className={styles.description}>
-            I’m a developer specializing in building React applications. I am
+            I’m an engineer specializing in front-end development. I am
             naturally curious, creative and I love to solve difficult problems.
             I'm currently available for select freelance work. If you'd like to
             connect, please get in touch.

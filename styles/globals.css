@@ -4,7 +4,7 @@ html {
   font-size: 16px;
   font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
     Menlo, Consolas, monospace;
-  background-color: rgb(2, 12, 27);
+  background-color: var(--background-primary);
   color: white;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
