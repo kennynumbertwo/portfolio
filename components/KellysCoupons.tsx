@@ -50,7 +50,7 @@ const couponList = [
   {
     name: 'Weekend Getaway',
     details:
-      'This coupon is good for one weekend getaway with the handsome devil, Kenny Tye. Redeemable on a date and time of your choosing.',
+      'This coupon is good for one weekend getaway with Kenny and Ruby. Redeemable on a date and time of your choosing.',
     subdetails:
       'The location must be reachable by car. All costs incured will be covered by Kenny Tye.',
   },
@@ -186,24 +186,14 @@ function KellysCoupons(): JSX.Element {
                 name and wondering what our daughter would be like.
               </p>
               <p>
-                Happy Mother’s Day! I can’t believe it’s already your second
-                Mother’s Day. It seems like it just yesterday we were going to
-                your doctor appointments, preparing Ruby’s room, deciding on a
-                name and wondering what our daughter would be like. I feel so
-                lucky to watch you be a mother to Ruby. You are thoughtful in
-                everything you do for her. You are patient in everything you
-                show and teach her. I love hearing you carefully explain new
-                things to her from the other room. I love how excited you get
-                when she looks cute in a new outfit that you bought for her. I
-                love the little “brusha brusha brusha” toothbrush song you came
-                up with and I love hearing you sing it to her at night. I am so
-                thankful for you. You are the glue of our family. You take on so
-                much responsibility for us. You are an absolutely incredible
-                mom, partner, friend, sister and person. You take on everything
-                selflessly and are so compassionate and giving to the people you
-                love. I want you to know how much I love and appreciate you.
-                Thank you for being the best partner to me in this crazy life.
-                Thank you for being the best mom. Love, Kenny
+                I feel so lucky to watch you be a mother to Ruby. You are
+                thoughtful in everything you do for her. You are patient in
+                everything you show and teach her. I love hearing you carefully
+                explain new things to her from the other room. I love how
+                excited you get when she looks cute in a new outfit that you
+                bought for her. I love the little “brusha brusha brusha”
+                toothbrush song you came up with and I love hearing you sing it
+                to her at night.
               </p>
               <div className={styles.imageWrapper}>
                 <Image src={KellyRuby2} />
