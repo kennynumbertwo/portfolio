@@ -1,7 +1,32 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/Coupons.module.css';
+import Image from 'next/image';
+import KellyRuby from '../public/kelly-ruby-1.jpeg';
+import KellyRuby2 from '../public/kelly-ruby-2.jpg';
 
 const couponList = [
+  {
+    name: 'Day Trip',
+    details:
+      'This coupon is good for one day trip with the loves of your life, Kenny and Ruby.',
+    subdetails:
+      'This ticket has already been redeemed. Please mark your calendars for the weekend of August 12 & 13th. Details will be revealed at a future date. Please plan to be outside and in the elements.',
+    notes: 'Ventura County Fair',
+  },
+  {
+    name: 'Day Trip',
+    details:
+      'This coupon is good for one day trip with the loves of your life, Kenny & Ruby. Redeemable on a date and time of your choosing.',
+    subdetails:
+      'This event is limited to a 60 mile radius. Penalties will incure for any mileage over 50 miles.',
+  },
+  {
+    name: 'Facial',
+    details:
+      'This coupon is good for one facial. Please use the included gift card when booking your appointment.',
+    subdetails:
+      '$250 gift card for AskCares Skincare in Studio City. Code: GCGL-WUV9-EE2Y-QLTV',
+  },
   {
     name: 'Date Night',
     details:
@@ -14,13 +39,6 @@ const couponList = [
       'This coupon is good for one household chore to be completed by Kenny Tye. Redeemable on a date and time of your choosing.',
     subdetails:
       'Chores are not to be limited to the kitchen and guest bathroom.',
-  },
-  {
-    name: 'Day Trip',
-    details:
-      'This coupon is good for one day trip with the love of your life, Kenny Tye. Redeemable on a date and time of your choosing.',
-    subdetails:
-      'Day Trip is limited to a 50 mile radius from the home of Kenny Tye. Penalties will incure for any mileage over 50 miles.',
   },
   {
     name: 'Night Off',
@@ -53,6 +71,8 @@ const couponList = [
 
 function KellysCoupons(): JSX.Element {
   const [currentTicket, setCurrentTicket] = useState<number>(0);
+  const [redeemedTickets, setRedeemedTickets] = useState<number[]>([0, 2]);
+  const [showLetter, setShowLetter] = useState<boolean>(false);
 
   useEffect(() => {
     // update the --background-primary variable in the document's root
@@ -67,7 +87,7 @@ function KellysCoupons(): JSX.Element {
     <>
       <div className={styles.backgroundOverlay}></div>
       <section className={styles.root}>
-        <h2 className={styles.header}>Kelly's Fun Tickets</h2>
+        <h2 className={styles.header}>Happy Mother's Day!</h2>
         <div className={styles.couponContainer}>
           {couponList.map((item, index) => {
             if (index === currentTicket) {
@@ -99,7 +119,7 @@ function KellysCoupons(): JSX.Element {
           >
             Previous
           </button>
-          <button className={styles.button}>Redeem</button>
+
           <button
             className={styles.button}
             onClick={() => {
@@ -111,11 +131,98 @@ function KellysCoupons(): JSX.Element {
             Next
           </button>
         </div>
+        <div
+          style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+        >
+          {redeemedTickets.includes(currentTicket) ? (
+            <button
+              className={styles.redeemButtonRedeemed}
+              onClick={() => {
+                if (!redeemedTickets.includes(currentTicket)) {
+                  setRedeemedTickets([...redeemedTickets, currentTicket]);
+                }
+              }}
+            >
+              Already Redeemed!
+            </button>
+          ) : (
+            <button
+              className={styles.redeemButton}
+              onClick={() => {
+                if (!redeemedTickets.includes(currentTicket)) {
+                  setRedeemedTickets([...redeemedTickets, currentTicket]);
+                }
+              }}
+            >
+              Redeem
+            </button>
+          )}
+        </div>
         <div className={styles.countContainer}>
           <p className={styles.count}>
             {currentTicket + 1} of {couponList.length}
           </p>
         </div>
+        <div className={styles.letterButtonWrapper}>
+          <button
+            className={styles.letterButton}
+            onClick={() => setShowLetter(true)}
+          >
+            For Ruby's Mom
+          </button>
+        </div>
+        {showLetter && (
+          <div className={styles.letterContainer}>
+            <div className={styles.letter}>
+              <div className={styles.imageWrapper}>
+                <Image src={KellyRuby} />
+              </div>
+
+              <p>Dear Kelly</p>
+              <p>
+                Happy Mother’s Day! I can’t believe it’s already your second
+                Mother’s Day. It seems like it just yesterday we were going to
+                your doctor appointments, preparing Ruby’s room, deciding on a
+                name and wondering what our daughter would be like.
+              </p>
+              <p>
+                Happy Mother’s Day! I can’t believe it’s already your second
+                Mother’s Day. It seems like it just yesterday we were going to
+                your doctor appointments, preparing Ruby’s room, deciding on a
+                name and wondering what our daughter would be like. I feel so
+                lucky to watch you be a mother to Ruby. You are thoughtful in
+                everything you do for her. You are patient in everything you
+                show and teach her. I love hearing you carefully explain new
+                things to her from the other room. I love how excited you get
+                when she looks cute in a new outfit that you bought for her. I
+                love the little “brusha brusha brusha” toothbrush song you came
+                up with and I love hearing you sing it to her at night. I am so
+                thankful for you. You are the glue of our family. You take on so
+                much responsibility for us. You are an absolutely incredible
+                mom, partner, friend, sister and person. You take on everything
+                selflessly and are so compassionate and giving to the people you
+                love. I want you to know how much I love and appreciate you.
+                Thank you for being the best partner to me in this crazy life.
+                Thank you for being the best mom. Love, Kenny
+              </p>
+              <div className={styles.imageWrapper}>
+                <Image src={KellyRuby2} />
+              </div>
+              <p>
+                I am so thankful for you. You are the glue of our family. You
+                take on so much responsibility for us. You are an absolutely
+                incredible mom, partner, friend, sister and person. You take on
+                everything selflessly and are so compassionate and giving to the
+                people you love. I want you to know how much I love and
+                appreciate you. Thank you for being the best partner to me in
+                this crazy life. Thank you for being the best mom.{' '}
+              </p>
+              <p>Love, Kenny</p>
+
+              <button onClick={() => setShowLetter(false)}>Close</button>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );
