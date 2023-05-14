@@ -6,6 +6,12 @@ import KellyRuby2 from '../public/kelly-ruby-2.jpg';
 
 const couponList = [
   {
+    name: 'Happy Mothers Day!',
+    details:
+      'These coupons have a secret expiration date. If they are not redeemed before the expiration date, they will be redeemed on a date and location of my choosing',
+    subdetails: 'Love, Kenny & Ruby',
+  },
+  {
     name: 'Day Trip',
     details:
       'This coupon is good for one day trip with the loves of your life, Kenny and Ruby.',
@@ -71,7 +77,7 @@ const couponList = [
 
 function KellysCoupons(): JSX.Element {
   const [currentTicket, setCurrentTicket] = useState<number>(0);
-  const [redeemedTickets, setRedeemedTickets] = useState<number[]>([0, 2]);
+  const [redeemedTickets, setRedeemedTickets] = useState<number[]>([1, 3]);
   const [showLetter, setShowLetter] = useState<boolean>(false);
 
   useEffect(() => {
