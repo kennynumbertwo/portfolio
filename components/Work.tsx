@@ -115,7 +115,7 @@ function Work({ animateProjects }: WorkProps): JSX.Element {
           {workList.map((item) => (
             <div className={styles.workItem} key={item.name}>
               {item.link ? (
-                <a className={styles.nameLink} href={item.link}>
+                <a className={styles.nameLink} href={item.link} target="_blank">
                   {item.name}
                 </a>
               ) : (
