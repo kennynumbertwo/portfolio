@@ -6,13 +6,31 @@ interface WorkProps {
 
 const workList = [
   {
+    name: 'Rishi Tea',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
+    name: 'Jacobsen Salt Co.',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
     name: 'Minna',
     year: 'Coming Soon',
     client: 'Bondfire',
     link: '',
   },
   {
-    name: 'Nugget',
+    name: 'Farmhouse Pottery',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
+    name: "Frankie's 457",
     year: 'Coming Soon',
     client: 'Bondfire',
     link: '',
@@ -24,16 +42,10 @@ const workList = [
     link: 'https://www.buddyswinebar.com/',
   },
   {
-    name: "Frankie's 457",
-    year: 'Coming Soon',
-    client: 'Bondfire',
-    link: '',
-  },
-  {
     name: 'Trendsetters-Consulting Inc.',
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Contract',
-    link: '',
+    link: 'https://www.tsci.net/',
   },
   {
     name: 'RAD Furniture',
@@ -41,7 +53,18 @@ const workList = [
     client: 'Bondfire',
     link: 'https://radfurniture.com/',
   },
-  { name: 'bf.inc', year: '2022', client: 'Bondfire', link: 'https://bf.inc' },
+  {
+    name: 'Diaspora Co.',
+    year: '2022',
+    client: 'Bondfire',
+    link: 'https://www.diasporaco.com/',
+  },
+  {
+    name: 'Bondfire - bf.inc',
+    year: '2022',
+    client: 'Bondfire',
+    link: 'https://bf.inc',
+  },
   {
     name: 'Strong Brand Social',
     year: '2022',
@@ -90,7 +113,7 @@ function Work({ animateProjects }: WorkProps): JSX.Element {
       >
         <div className={styles.workWrapper}>
           {workList.map((item) => (
-            <div className={styles.workItem}>
+            <div className={styles.workItem} key={item.name}>
               {item.link ? (
                 <a className={styles.nameLink} href={item.link}>
                   {item.name}
