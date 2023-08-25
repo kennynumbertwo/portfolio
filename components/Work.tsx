@@ -6,6 +6,12 @@ interface WorkProps {
 
 const workList = [
   {
+    name: 'Yes Society',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
     name: 'Rishi Tea',
     year: 'Coming Soon',
     client: 'Bondfire',
@@ -13,27 +19,27 @@ const workList = [
   },
   {
     name: 'Jacobsen Salt Co.',
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Bondfire',
-    link: '',
+    link: 'https://jacobsensalt.com/',
   },
   {
     name: 'Minna',
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Bondfire',
-    link: '',
+    link: 'https://www.minna-goods.com/',
   },
   {
     name: 'Farmhouse Pottery',
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Bondfire',
-    link: '',
+    link: 'https://www.farmhousepottery.com/',
   },
   {
     name: "Frankie's 457",
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Bondfire',
-    link: '',
+    link: 'https://frankies457.com/',
   },
   {
     name: "Buddy's Wine",
