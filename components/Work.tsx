@@ -6,16 +6,22 @@ interface WorkProps {
 
 const workList = [
   {
-    name: 'Yes Society',
+    name: 'The Many',
     year: 'Coming Soon',
     client: 'Bondfire',
     link: '',
   },
   {
     name: 'Rishi Tea',
-    year: 'Coming Soon',
+    year: '2023',
     client: 'Bondfire',
-    link: '',
+    link: 'https://rishi-tea.com/',
+  },
+  {
+    name: 'Yes Society',
+    year: '2023',
+    client: 'Bondfire',
+    link: 'https://yes-society.com/',
   },
   {
     name: 'Jacobsen Salt Co.',

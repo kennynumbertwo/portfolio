@@ -2,6 +2,7 @@
   max-width: 100vw;
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
 .introduction {
   width: 65%;
