@@ -94,27 +94,29 @@ function OrbsContainer({ isMobile, isMidsize, scroll }: OrbsContainerProps) {
   };
 
   return (
-    <div className={styles.container}>
-      {orbs.map((orb) => (
-        <Orb
-          key={orb.id}
-          id={orb.id}
-          isFading={orb.isFading}
-          isUser={false}
-          scroll={scroll}
-          isMobile={isMobile}
-        />
-      ))}
-      {userOrbs.map((orb) => (
-        <Orb
-          key={orb.id}
-          id={orb.id}
-          isFading={orb.isFading}
-          isUser={true}
-          scroll={scroll}
-          isMobile={isMobile}
-        />
-      ))}
+    <>
+      <div className={styles.container}>
+        {orbs.map((orb) => (
+          <Orb
+            key={orb.id}
+            id={orb.id}
+            isFading={orb.isFading}
+            isUser={false}
+            scroll={scroll}
+            isMobile={isMobile}
+          />
+        ))}
+        {userOrbs.map((orb) => (
+          <Orb
+            key={orb.id}
+            id={orb.id}
+            isFading={orb.isFading}
+            isUser={true}
+            scroll={scroll}
+            isMobile={isMobile}
+          />
+        ))}
+      </div>
       {isMidsize || isMobile ? (
         <LinkFooterBubbleMobile
           handleAddOrbClick={handleAddOrbClick}
@@ -130,7 +132,7 @@ function OrbsContainer({ isMobile, isMidsize, scroll }: OrbsContainerProps) {
           handleStopClick={handleStopClick}
         />
       )}
-    </div>
+    </>
   );
 }
 
