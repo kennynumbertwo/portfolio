@@ -43,6 +43,8 @@ function Navbar({
           <button
             className={`${styles.hamburger} ${isActive && styles.active}`}
             onClick={handleSetHamburgerClass}
+            aria-expanded={isShowing}
+            aria-controls="menu"
           >
             <span></span>
             <span></span>
@@ -54,6 +56,7 @@ function Navbar({
             className={`${styles.container} ${
               isActive ? styles.showing : styles.hidden
             }`}
+            id="menu"
           >
             <div className={styles.resumeWrapper}>
               <a
