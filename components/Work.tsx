@@ -12,6 +12,24 @@ const workList = [
     link: '',
   },
   {
+    name: 'SIN Ceramics',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
+    name: 'Camp Craft Cocktails',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
+    name: 'Messermeister',
+    year: 'Coming Soon',
+    client: 'Bondfire',
+    link: '',
+  },
+  {
     name: 'Rishi Tea',
     year: '2023',
     client: 'Bondfire',
